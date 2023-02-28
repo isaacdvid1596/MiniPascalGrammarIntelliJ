@@ -197,6 +197,66 @@ public interface MiniPascalGrammarListener extends ParseTreeListener {
 	 */
 	void exitRead_statement(MiniPascalGrammarParser.Read_statementContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link MiniPascalGrammarParser#function_declaration}.
+	 * @param ctx the parse tree
+	 */
+	void enterFunction_declaration(MiniPascalGrammarParser.Function_declarationContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link MiniPascalGrammarParser#function_declaration}.
+	 * @param ctx the parse tree
+	 */
+	void exitFunction_declaration(MiniPascalGrammarParser.Function_declarationContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link MiniPascalGrammarParser#parameter_list}.
+	 * @param ctx the parse tree
+	 */
+	void enterParameter_list(MiniPascalGrammarParser.Parameter_listContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link MiniPascalGrammarParser#parameter_list}.
+	 * @param ctx the parse tree
+	 */
+	void exitParameter_list(MiniPascalGrammarParser.Parameter_listContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link MiniPascalGrammarParser#parameter_declaration}.
+	 * @param ctx the parse tree
+	 */
+	void enterParameter_declaration(MiniPascalGrammarParser.Parameter_declarationContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link MiniPascalGrammarParser#parameter_declaration}.
+	 * @param ctx the parse tree
+	 */
+	void exitParameter_declaration(MiniPascalGrammarParser.Parameter_declarationContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link MiniPascalGrammarParser#function_call}.
+	 * @param ctx the parse tree
+	 */
+	void enterFunction_call(MiniPascalGrammarParser.Function_callContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link MiniPascalGrammarParser#function_call}.
+	 * @param ctx the parse tree
+	 */
+	void exitFunction_call(MiniPascalGrammarParser.Function_callContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link MiniPascalGrammarParser#argument_list}.
+	 * @param ctx the parse tree
+	 */
+	void enterArgument_list(MiniPascalGrammarParser.Argument_listContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link MiniPascalGrammarParser#argument_list}.
+	 * @param ctx the parse tree
+	 */
+	void exitArgument_list(MiniPascalGrammarParser.Argument_listContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link MiniPascalGrammarParser#end_statement}.
+	 * @param ctx the parse tree
+	 */
+	void enterEnd_statement(MiniPascalGrammarParser.End_statementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link MiniPascalGrammarParser#end_statement}.
+	 * @param ctx the parse tree
+	 */
+	void exitEnd_statement(MiniPascalGrammarParser.End_statementContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link MiniPascalGrammarParser#expression}.
 	 * @param ctx the parse tree
 	 */

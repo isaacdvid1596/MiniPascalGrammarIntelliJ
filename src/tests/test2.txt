@@ -1,8 +1,9 @@
 program hello;
 var
-  name: string[50];
+  name: array[50] of string;
 begin
-  write("What is your name? ");
-  readln(name);
-  write("Hello, ", name, "!");
+  write('What is your name?');
+  read(name);
+  write('Hello, ', name, '!');
+end
 end.

@@ -124,6 +124,42 @@ public interface MiniPascalGrammarVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitRead_statement(MiniPascalGrammarParser.Read_statementContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link MiniPascalGrammarParser#function_declaration}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFunction_declaration(MiniPascalGrammarParser.Function_declarationContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link MiniPascalGrammarParser#parameter_list}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitParameter_list(MiniPascalGrammarParser.Parameter_listContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link MiniPascalGrammarParser#parameter_declaration}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitParameter_declaration(MiniPascalGrammarParser.Parameter_declarationContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link MiniPascalGrammarParser#function_call}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFunction_call(MiniPascalGrammarParser.Function_callContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link MiniPascalGrammarParser#argument_list}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitArgument_list(MiniPascalGrammarParser.Argument_listContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link MiniPascalGrammarParser#end_statement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitEnd_statement(MiniPascalGrammarParser.End_statementContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link MiniPascalGrammarParser#expression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
