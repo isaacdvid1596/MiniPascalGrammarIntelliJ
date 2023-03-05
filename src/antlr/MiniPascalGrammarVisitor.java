@@ -1,4 +1,4 @@
-// Generated from java-escape by ANTLR 4.11.1
+package antlr;// Generated from java-escape by ANTLR 4.11.1
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**
@@ -16,17 +16,17 @@ public interface MiniPascalGrammarVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitProgram(MiniPascalGrammarParser.ProgramContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link MiniPascalGrammarParser#program_end_marker}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitProgram_end_marker(MiniPascalGrammarParser.Program_end_markerContext ctx);
-	/**
 	 * Visit a parse tree produced by {@link MiniPascalGrammarParser#block}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitBlock(MiniPascalGrammarParser.BlockContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link MiniPascalGrammarParser#program_end_marker}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitProgram_end_marker(MiniPascalGrammarParser.Program_end_markerContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link MiniPascalGrammarParser#var_declaration}.
 	 * @param ctx the parse tree
@@ -129,6 +129,18 @@ public interface MiniPascalGrammarVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitFunction_declaration(MiniPascalGrammarParser.Function_declarationContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link MiniPascalGrammarParser#function_block}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFunction_block(MiniPascalGrammarParser.Function_blockContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link MiniPascalGrammarParser#function_end_statement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFunction_end_statement(MiniPascalGrammarParser.Function_end_statementContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link MiniPascalGrammarParser#parameter_list}.
 	 * @param ctx the parse tree

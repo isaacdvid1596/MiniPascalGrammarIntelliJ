@@ -1,4 +1,4 @@
-// Generated from java-escape by ANTLR 4.11.1
+package antlr;// Generated from java-escape by ANTLR 4.11.1
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
@@ -28,18 +28,6 @@ public class MiniPascalGrammarBaseListener implements MiniPascalGrammarListener 
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterProgram_end_marker(MiniPascalGrammarParser.Program_end_markerContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitProgram_end_marker(MiniPascalGrammarParser.Program_end_markerContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterBlock(MiniPascalGrammarParser.BlockContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -47,6 +35,18 @@ public class MiniPascalGrammarBaseListener implements MiniPascalGrammarListener 
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitBlock(MiniPascalGrammarParser.BlockContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterProgram_end_marker(MiniPascalGrammarParser.Program_end_markerContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitProgram_end_marker(MiniPascalGrammarParser.Program_end_markerContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -251,6 +251,30 @@ public class MiniPascalGrammarBaseListener implements MiniPascalGrammarListener 
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitFunction_declaration(MiniPascalGrammarParser.Function_declarationContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterFunction_block(MiniPascalGrammarParser.Function_blockContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitFunction_block(MiniPascalGrammarParser.Function_blockContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterFunction_end_statement(MiniPascalGrammarParser.Function_end_statementContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitFunction_end_statement(MiniPascalGrammarParser.Function_end_statementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
