@@ -2,7 +2,7 @@ grammar MiniPascalGrammar;
 
 program : 'program' IDENTIFIER ';' block program_end_marker;
 program_end_marker : '.';
-block : var_declaration* function_declaration* compound_statement;
+block : var_declaration* function_declaration* compound_statement*;
 var_declaration : 'var' (variable_declaration ';')*;
 variable_declaration : IDENTIFIER ':' type (array_specifier)?;
 array_specifier : 'array' '[' index_range ']' 'of';
