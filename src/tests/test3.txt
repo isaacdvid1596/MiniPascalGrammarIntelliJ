@@ -3,8 +3,7 @@ var
   x: integer;
  b: integer;
 function myFunction(a: integer, b: integer): integer;
-var
-c: integer;
+
 begin
   c := a + b;
   myFunction := c;
