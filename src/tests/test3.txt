@@ -8,7 +8,8 @@ begin
   c := a + b;
   myFunction := c;
 end;
-
+end
+end.
 begin
   x := 10;
   writeln('x before function call: ', x);
