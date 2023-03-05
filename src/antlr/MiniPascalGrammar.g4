@@ -25,7 +25,7 @@ parameter_declaration: IDENTIFIER ':' type;
 function_call : IDENTIFIER '(' argument_list? ')';
 argument_list : (expression (',' expression)*) ;
 end_statement: 'end';
-expression : simple_expression ((relop | 'and' | 'or') simple_expression)*;
+expression : simple_expression ((relop | 'and' | 'or' | ',') simple_expression)*;
 simple_expression : term ((addop | 'or') term)*;
 term : factor (mulop factor)*;
 factor : IDENTIFIER (index_access | function_call | '(' expression ')' | ('not' factor))?
