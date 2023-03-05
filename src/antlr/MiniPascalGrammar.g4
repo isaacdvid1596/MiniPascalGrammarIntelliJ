@@ -9,7 +9,7 @@ array_specifier : 'array' '[' index_range ']' 'of';
 index_range : NUMBER '..' NUMBER;
 index : NUMBER;
 type : 'integer' | 'real' | 'boolean' | 'char' | 'string' | 'array' '[' index_range ']' 'of' type;
-compound_statement : 'begin' statement_list end_statement;
+compound_statement : 'begin' statement_list | end_statement;
 statement_list : statement (';' statement)*;
 statement : compound_statement | assignment_statement | if_statement | while_statement | for_statement | repeat_statement | write_statement | read_statement | function_call | end_statement;
 assignment_statement : variable ':=' expression;
