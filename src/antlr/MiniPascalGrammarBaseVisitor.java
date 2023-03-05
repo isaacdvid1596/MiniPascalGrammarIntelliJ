@@ -1,4 +1,4 @@
-// Generated from java-escape by ANTLR 4.11.1
+package antlr;// Generated from java-escape by ANTLR 4.11.1
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 
 /**
@@ -24,14 +24,14 @@ public class MiniPascalGrammarBaseVisitor<T> extends AbstractParseTreeVisitor<T>
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitProgram_end_marker(MiniPascalGrammarParser.Program_end_markerContext ctx) { return visitChildren(ctx); }
+	@Override public T visitBlock(MiniPascalGrammarParser.BlockContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitBlock(MiniPascalGrammarParser.BlockContext ctx) { return visitChildren(ctx); }
+	@Override public T visitProgram_end_marker(MiniPascalGrammarParser.Program_end_markerContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -151,6 +151,20 @@ public class MiniPascalGrammarBaseVisitor<T> extends AbstractParseTreeVisitor<T>
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
 	@Override public T visitFunction_declaration(MiniPascalGrammarParser.Function_declarationContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitFunction_block(MiniPascalGrammarParser.Function_blockContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitFunction_end_statement(MiniPascalGrammarParser.Function_end_statementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *

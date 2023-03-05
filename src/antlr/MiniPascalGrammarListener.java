@@ -1,4 +1,4 @@
-// Generated from java-escape by ANTLR 4.11.1
+package antlr;// Generated from java-escape by ANTLR 4.11.1
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
@@ -17,16 +17,6 @@ public interface MiniPascalGrammarListener extends ParseTreeListener {
 	 */
 	void exitProgram(MiniPascalGrammarParser.ProgramContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link MiniPascalGrammarParser#program_end_marker}.
-	 * @param ctx the parse tree
-	 */
-	void enterProgram_end_marker(MiniPascalGrammarParser.Program_end_markerContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link MiniPascalGrammarParser#program_end_marker}.
-	 * @param ctx the parse tree
-	 */
-	void exitProgram_end_marker(MiniPascalGrammarParser.Program_end_markerContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link MiniPascalGrammarParser#block}.
 	 * @param ctx the parse tree
 	 */
@@ -36,6 +26,16 @@ public interface MiniPascalGrammarListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitBlock(MiniPascalGrammarParser.BlockContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link MiniPascalGrammarParser#program_end_marker}.
+	 * @param ctx the parse tree
+	 */
+	void enterProgram_end_marker(MiniPascalGrammarParser.Program_end_markerContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link MiniPascalGrammarParser#program_end_marker}.
+	 * @param ctx the parse tree
+	 */
+	void exitProgram_end_marker(MiniPascalGrammarParser.Program_end_markerContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link MiniPascalGrammarParser#var_declaration}.
 	 * @param ctx the parse tree
@@ -206,6 +206,26 @@ public interface MiniPascalGrammarListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitFunction_declaration(MiniPascalGrammarParser.Function_declarationContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link MiniPascalGrammarParser#function_block}.
+	 * @param ctx the parse tree
+	 */
+	void enterFunction_block(MiniPascalGrammarParser.Function_blockContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link MiniPascalGrammarParser#function_block}.
+	 * @param ctx the parse tree
+	 */
+	void exitFunction_block(MiniPascalGrammarParser.Function_blockContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link MiniPascalGrammarParser#function_end_statement}.
+	 * @param ctx the parse tree
+	 */
+	void enterFunction_end_statement(MiniPascalGrammarParser.Function_end_statementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link MiniPascalGrammarParser#function_end_statement}.
+	 * @param ctx the parse tree
+	 */
+	void exitFunction_end_statement(MiniPascalGrammarParser.Function_end_statementContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link MiniPascalGrammarParser#parameter_list}.
 	 * @param ctx the parse tree
