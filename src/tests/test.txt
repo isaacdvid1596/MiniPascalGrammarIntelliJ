@@ -2,7 +2,7 @@ program test;
 
 var
   nums: array[1..5] of integer;
-  a: array [0] of integer;
+  a: array [0..1] of integer;
   i: integer;
   sum: integer;
   saludo: string;
@@ -20,5 +20,4 @@ begin
   saludo := 'hola';
   sal := 'a';
   read(saludo);
-end
 end.

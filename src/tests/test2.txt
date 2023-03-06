@@ -1,6 +1,6 @@
 program hello;
 var
-  name: array[50] of string;
+  name: array[0..5] of string;
 begin
   write('What is your name?');
   read(name);
