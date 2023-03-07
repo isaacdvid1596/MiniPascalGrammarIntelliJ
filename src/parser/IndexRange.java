@@ -16,4 +16,8 @@ public class IndexRange {
         return this.toIndex;
     }
 
+    @Override
+    public String toString() {
+        return this.getFromIndex()+".."+this.getToIndexIndex();
+    }
 }

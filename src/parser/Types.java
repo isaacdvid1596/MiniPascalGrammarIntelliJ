@@ -1,5 +1,10 @@
 package parser;
 
-public class Types {
-
+enum Types {
+    INTEGER,
+    REAL,
+    BOOLEAN,
+    CHAR,
+    STRING,
+    ARRAY;
 }
