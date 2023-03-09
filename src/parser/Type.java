@@ -16,5 +16,4 @@ public class Type {
         this.types.put(STRING,"string");
         this.types.put(ARRAY,"array ["+indexRange.toString()+"] of "+this.types.get(typeKey));
     }
-
 }
