@@ -1,6 +1,6 @@
 package parser;
 
-public class FunctionCall {
+public class FunctionCall extends Statement{
     private String identifier;
     private ArgumentList argumentList;
 
