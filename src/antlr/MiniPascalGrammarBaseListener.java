@@ -1,4 +1,7 @@
-package antlr;// Generated from java-escape by ANTLR 4.11.1
+// Generated from java-escape by ANTLR 4.11.1
+
+    package antlr;
+
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
@@ -16,49 +19,49 @@ public class MiniPascalGrammarBaseListener implements MiniPascalGrammarListener 
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterProgram(MiniPascalGrammarParser.ProgramContext ctx) { }
+	@Override public void enterPrograma(MiniPascalGrammarParser.ProgramaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitProgram(MiniPascalGrammarParser.ProgramContext ctx) { }
+	@Override public void exitPrograma(MiniPascalGrammarParser.ProgramaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterBlock(MiniPascalGrammarParser.BlockContext ctx) { }
+	@Override public void enterBloque(MiniPascalGrammarParser.BloqueContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitBlock(MiniPascalGrammarParser.BlockContext ctx) { }
+	@Override public void exitBloque(MiniPascalGrammarParser.BloqueContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterProgram_end_marker(MiniPascalGrammarParser.Program_end_markerContext ctx) { }
+	@Override public void enterProgramEndMarker(MiniPascalGrammarParser.ProgramEndMarkerContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitProgram_end_marker(MiniPascalGrammarParser.Program_end_markerContext ctx) { }
+	@Override public void exitProgramEndMarker(MiniPascalGrammarParser.ProgramEndMarkerContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterVar_declaration(MiniPascalGrammarParser.Var_declarationContext ctx) { }
+	@Override public void enterVarDeclaration(MiniPascalGrammarParser.VarDeclarationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitVar_declaration(MiniPascalGrammarParser.Var_declarationContext ctx) { }
+	@Override public void exitVarDeclaration(MiniPascalGrammarParser.VarDeclarationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -76,337 +79,577 @@ public class MiniPascalGrammarBaseListener implements MiniPascalGrammarListener 
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterArray_specifier(MiniPascalGrammarParser.Array_specifierContext ctx) { }
+	@Override public void enterArraySpecifier(MiniPascalGrammarParser.ArraySpecifierContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitArray_specifier(MiniPascalGrammarParser.Array_specifierContext ctx) { }
+	@Override public void exitArraySpecifier(MiniPascalGrammarParser.ArraySpecifierContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterIndex_range(MiniPascalGrammarParser.Index_rangeContext ctx) { }
+	@Override public void enterIndexRange(MiniPascalGrammarParser.IndexRangeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitIndex_range(MiniPascalGrammarParser.Index_rangeContext ctx) { }
+	@Override public void exitIndexRange(MiniPascalGrammarParser.IndexRangeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterIndex(MiniPascalGrammarParser.IndexContext ctx) { }
+	@Override public void enterIndice(MiniPascalGrammarParser.IndiceContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitIndex(MiniPascalGrammarParser.IndexContext ctx) { }
+	@Override public void exitIndice(MiniPascalGrammarParser.IndiceContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterType(MiniPascalGrammarParser.TypeContext ctx) { }
+	@Override public void enterInteger(MiniPascalGrammarParser.IntegerContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitType(MiniPascalGrammarParser.TypeContext ctx) { }
+	@Override public void exitInteger(MiniPascalGrammarParser.IntegerContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCompound_statement(MiniPascalGrammarParser.Compound_statementContext ctx) { }
+	@Override public void enterReal(MiniPascalGrammarParser.RealContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCompound_statement(MiniPascalGrammarParser.Compound_statementContext ctx) { }
+	@Override public void exitReal(MiniPascalGrammarParser.RealContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterStatement_list(MiniPascalGrammarParser.Statement_listContext ctx) { }
+	@Override public void enterBoolean(MiniPascalGrammarParser.BooleanContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitStatement_list(MiniPascalGrammarParser.Statement_listContext ctx) { }
+	@Override public void exitBoolean(MiniPascalGrammarParser.BooleanContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterStatement(MiniPascalGrammarParser.StatementContext ctx) { }
+	@Override public void enterChar(MiniPascalGrammarParser.CharContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitStatement(MiniPascalGrammarParser.StatementContext ctx) { }
+	@Override public void exitChar(MiniPascalGrammarParser.CharContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterAssignment_statement(MiniPascalGrammarParser.Assignment_statementContext ctx) { }
+	@Override public void enterString(MiniPascalGrammarParser.StringContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitAssignment_statement(MiniPascalGrammarParser.Assignment_statementContext ctx) { }
+	@Override public void exitString(MiniPascalGrammarParser.StringContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterIf_statement(MiniPascalGrammarParser.If_statementContext ctx) { }
+	@Override public void enterArray(MiniPascalGrammarParser.ArrayContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitIf_statement(MiniPascalGrammarParser.If_statementContext ctx) { }
+	@Override public void exitArray(MiniPascalGrammarParser.ArrayContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterWhile_statement(MiniPascalGrammarParser.While_statementContext ctx) { }
+	@Override public void enterCompountStatement(MiniPascalGrammarParser.CompountStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitWhile_statement(MiniPascalGrammarParser.While_statementContext ctx) { }
+	@Override public void exitCompountStatement(MiniPascalGrammarParser.CompountStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFor_statement(MiniPascalGrammarParser.For_statementContext ctx) { }
+	@Override public void enterStatementList(MiniPascalGrammarParser.StatementListContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFor_statement(MiniPascalGrammarParser.For_statementContext ctx) { }
+	@Override public void exitStatementList(MiniPascalGrammarParser.StatementListContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterRepeat_statement(MiniPascalGrammarParser.Repeat_statementContext ctx) { }
+	@Override public void enterCompountStatementNonTerminal(MiniPascalGrammarParser.CompountStatementNonTerminalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitRepeat_statement(MiniPascalGrammarParser.Repeat_statementContext ctx) { }
+	@Override public void exitCompountStatementNonTerminal(MiniPascalGrammarParser.CompountStatementNonTerminalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterWrite_statement(MiniPascalGrammarParser.Write_statementContext ctx) { }
+	@Override public void enterAssignmentStatementNonTerminal(MiniPascalGrammarParser.AssignmentStatementNonTerminalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitWrite_statement(MiniPascalGrammarParser.Write_statementContext ctx) { }
+	@Override public void exitAssignmentStatementNonTerminal(MiniPascalGrammarParser.AssignmentStatementNonTerminalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterRead_statement(MiniPascalGrammarParser.Read_statementContext ctx) { }
+	@Override public void enterIfStatementNonTerminal(MiniPascalGrammarParser.IfStatementNonTerminalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitRead_statement(MiniPascalGrammarParser.Read_statementContext ctx) { }
+	@Override public void exitIfStatementNonTerminal(MiniPascalGrammarParser.IfStatementNonTerminalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFunction_declaration(MiniPascalGrammarParser.Function_declarationContext ctx) { }
+	@Override public void enterWhileStatementNonTerminal(MiniPascalGrammarParser.WhileStatementNonTerminalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFunction_declaration(MiniPascalGrammarParser.Function_declarationContext ctx) { }
+	@Override public void exitWhileStatementNonTerminal(MiniPascalGrammarParser.WhileStatementNonTerminalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFunction_block(MiniPascalGrammarParser.Function_blockContext ctx) { }
+	@Override public void enterForStatementNonTerminal(MiniPascalGrammarParser.ForStatementNonTerminalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFunction_block(MiniPascalGrammarParser.Function_blockContext ctx) { }
+	@Override public void exitForStatementNonTerminal(MiniPascalGrammarParser.ForStatementNonTerminalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFunction_end_statement(MiniPascalGrammarParser.Function_end_statementContext ctx) { }
+	@Override public void enterRepeatStatementNonTerminal(MiniPascalGrammarParser.RepeatStatementNonTerminalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFunction_end_statement(MiniPascalGrammarParser.Function_end_statementContext ctx) { }
+	@Override public void exitRepeatStatementNonTerminal(MiniPascalGrammarParser.RepeatStatementNonTerminalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterParameter_list(MiniPascalGrammarParser.Parameter_listContext ctx) { }
+	@Override public void enterWriteStatementNonTerminal(MiniPascalGrammarParser.WriteStatementNonTerminalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitParameter_list(MiniPascalGrammarParser.Parameter_listContext ctx) { }
+	@Override public void exitWriteStatementNonTerminal(MiniPascalGrammarParser.WriteStatementNonTerminalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterParameter_declaration(MiniPascalGrammarParser.Parameter_declarationContext ctx) { }
+	@Override public void enterReadStatementNonTerminal(MiniPascalGrammarParser.ReadStatementNonTerminalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitParameter_declaration(MiniPascalGrammarParser.Parameter_declarationContext ctx) { }
+	@Override public void exitReadStatementNonTerminal(MiniPascalGrammarParser.ReadStatementNonTerminalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFunction_call(MiniPascalGrammarParser.Function_callContext ctx) { }
+	@Override public void enterFunctionStatementNonTerminal(MiniPascalGrammarParser.FunctionStatementNonTerminalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFunction_call(MiniPascalGrammarParser.Function_callContext ctx) { }
+	@Override public void exitFunctionStatementNonTerminal(MiniPascalGrammarParser.FunctionStatementNonTerminalContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterArgument_list(MiniPascalGrammarParser.Argument_listContext ctx) { }
+	@Override public void enterAssignmentStatement(MiniPascalGrammarParser.AssignmentStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitArgument_list(MiniPascalGrammarParser.Argument_listContext ctx) { }
+	@Override public void exitAssignmentStatement(MiniPascalGrammarParser.AssignmentStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterEnd_statement(MiniPascalGrammarParser.End_statementContext ctx) { }
+	@Override public void enterIfStatement(MiniPascalGrammarParser.IfStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitEnd_statement(MiniPascalGrammarParser.End_statementContext ctx) { }
+	@Override public void exitIfStatement(MiniPascalGrammarParser.IfStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExpression(MiniPascalGrammarParser.ExpressionContext ctx) { }
+	@Override public void enterWhileStatement(MiniPascalGrammarParser.WhileStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExpression(MiniPascalGrammarParser.ExpressionContext ctx) { }
+	@Override public void exitWhileStatement(MiniPascalGrammarParser.WhileStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterSimple_expression(MiniPascalGrammarParser.Simple_expressionContext ctx) { }
+	@Override public void enterForStatement(MiniPascalGrammarParser.ForStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitSimple_expression(MiniPascalGrammarParser.Simple_expressionContext ctx) { }
+	@Override public void exitForStatement(MiniPascalGrammarParser.ForStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterTerm(MiniPascalGrammarParser.TermContext ctx) { }
+	@Override public void enterRepeatStatement(MiniPascalGrammarParser.RepeatStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitTerm(MiniPascalGrammarParser.TermContext ctx) { }
+	@Override public void exitRepeatStatement(MiniPascalGrammarParser.RepeatStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFactor(MiniPascalGrammarParser.FactorContext ctx) { }
+	@Override public void enterWriteStatement(MiniPascalGrammarParser.WriteStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFactor(MiniPascalGrammarParser.FactorContext ctx) { }
+	@Override public void exitWriteStatement(MiniPascalGrammarParser.WriteStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterVariable(MiniPascalGrammarParser.VariableContext ctx) { }
+	@Override public void enterReadStatement(MiniPascalGrammarParser.ReadStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitVariable(MiniPascalGrammarParser.VariableContext ctx) { }
+	@Override public void exitReadStatement(MiniPascalGrammarParser.ReadStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterIndex_access(MiniPascalGrammarParser.Index_accessContext ctx) { }
+	@Override public void enterFunctionDeclaration(MiniPascalGrammarParser.FunctionDeclarationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitIndex_access(MiniPascalGrammarParser.Index_accessContext ctx) { }
+	@Override public void exitFunctionDeclaration(MiniPascalGrammarParser.FunctionDeclarationContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterFunctionBlock(MiniPascalGrammarParser.FunctionBlockContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitFunctionBlock(MiniPascalGrammarParser.FunctionBlockContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterFunctionEndStatement(MiniPascalGrammarParser.FunctionEndStatementContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitFunctionEndStatement(MiniPascalGrammarParser.FunctionEndStatementContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterParameterList(MiniPascalGrammarParser.ParameterListContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitParameterList(MiniPascalGrammarParser.ParameterListContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterParameterDeclaration(MiniPascalGrammarParser.ParameterDeclarationContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitParameterDeclaration(MiniPascalGrammarParser.ParameterDeclarationContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterFunctionCall(MiniPascalGrammarParser.FunctionCallContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitFunctionCall(MiniPascalGrammarParser.FunctionCallContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterArgumentList(MiniPascalGrammarParser.ArgumentListContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitArgumentList(MiniPascalGrammarParser.ArgumentListContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterEndStatement(MiniPascalGrammarParser.EndStatementContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitEndStatement(MiniPascalGrammarParser.EndStatementContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterExpresion(MiniPascalGrammarParser.ExpresionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitExpresion(MiniPascalGrammarParser.ExpresionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterSimpleExpression(MiniPascalGrammarParser.SimpleExpressionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitSimpleExpression(MiniPascalGrammarParser.SimpleExpressionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterTermino(MiniPascalGrammarParser.TerminoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitTermino(MiniPascalGrammarParser.TerminoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterIdentifierTerminal(MiniPascalGrammarParser.IdentifierTerminalContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitIdentifierTerminal(MiniPascalGrammarParser.IdentifierTerminalContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterNumberTerminal(MiniPascalGrammarParser.NumberTerminalContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitNumberTerminal(MiniPascalGrammarParser.NumberTerminalContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterStringTerminal(MiniPascalGrammarParser.StringTerminalContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitStringTerminal(MiniPascalGrammarParser.StringTerminalContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterCharTerminal(MiniPascalGrammarParser.CharTerminalContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitCharTerminal(MiniPascalGrammarParser.CharTerminalContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterBetweenParentsExpression(MiniPascalGrammarParser.BetweenParentsExpressionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitBetweenParentsExpression(MiniPascalGrammarParser.BetweenParentsExpressionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterNotFactorOperator(MiniPascalGrammarParser.NotFactorOperatorContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitNotFactorOperator(MiniPascalGrammarParser.NotFactorOperatorContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterTrueOperator(MiniPascalGrammarParser.TrueOperatorContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitTrueOperator(MiniPascalGrammarParser.TrueOperatorContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterFalseOperator(MiniPascalGrammarParser.FalseOperatorContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitFalseOperator(MiniPascalGrammarParser.FalseOperatorContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterVariableNonTerminal(MiniPascalGrammarParser.VariableNonTerminalContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitVariableNonTerminal(MiniPascalGrammarParser.VariableNonTerminalContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterIndexAccess(MiniPascalGrammarParser.IndexAccessContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitIndexAccess(MiniPascalGrammarParser.IndexAccessContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
