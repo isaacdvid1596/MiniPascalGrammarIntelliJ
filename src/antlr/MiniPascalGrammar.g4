@@ -1,5 +1,6 @@
 grammar MiniPascalGrammar;
 
+<<<<<<< HEAD
 program : 'program' IDENTIFIER ';' block;
 block : var_declaration* function_declaration* compound_statement* program_end_marker;
 program_end_marker : '.';
@@ -10,9 +11,34 @@ block : var_declaration* function_declaration* compound_statement*;
 var_declaration : 'var' (variable_declaration ';')*;
 variable_declaration : IDENTIFIER ':' type (array_specifier)?;
 array_specifier : 'array' '[' index_range ']' 'of';
+=======
+@header{
+    package antlr;
+}
+
+program : 'program' IDENTIFIER ';' block #Programa
+;
+block : var_declaration* function_declaration* compound_statement* program_end_marker #Bloque
+;
+//(var_declaration function_declaration compound_statement)* program_end_marker;
+program_end_marker : '.' #ProgramEndMarker
+;
+var_declaration : 'var' (variable_declaration ';')* #VarDeclaration
+;
+variable_declaration : IDENTIFIER ':' type (array_specifier)?
+;
+array_specifier : 'array' '[' index_range ']' 'of' #ArraySpecifier
+;
+>>>>>>> isaacbranch
 index_range : NUMBER '..' NUMBER;
-index : NUMBER;
-type : 'integer' | 'real' | 'boolean' | 'char' | 'string' | 'array' '[' index_range ']' 'of' type;
+index : NUMBER; //REMOVE?
+type : 'integer'
+        | 'real'
+        | 'boolean'
+        | 'char'
+        | 'string'
+        | 'array' '[' index_range ']' 'of' type;
+//array_type: 'array'
 compound_statement : 'begin' statement_list end_statement*;
 statement_list : statement (';'statement?)*;
 statement : compound_statement | assignment_statement | if_statement | while_statement | for_statement | repeat_statement | write_statement | read_statement | function_call;
