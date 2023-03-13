@@ -1,5 +1,8 @@
 // Generated from java-escape by ANTLR 4.11.1
 package antlr;
+
+    package antlr;
+
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 
 /**
@@ -18,28 +21,28 @@ public class MiniPascalGrammarBaseVisitor<T> extends AbstractParseTreeVisitor<T>
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitProgram(MiniPascalGrammarParser.ProgramContext ctx) { return visitChildren(ctx); }
+	@Override public T visitPrograma(MiniPascalGrammarParser.ProgramaContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitProgram_end_marker(MiniPascalGrammarParser.Program_end_markerContext ctx) { return visitChildren(ctx); }
+	@Override public T visitBloque(MiniPascalGrammarParser.BloqueContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitBlock(MiniPascalGrammarParser.BlockContext ctx) { return visitChildren(ctx); }
+	@Override public T visitProgramEndMarker(MiniPascalGrammarParser.ProgramEndMarkerContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitVar_declaration(MiniPascalGrammarParser.Var_declarationContext ctx) { return visitChildren(ctx); }
+	@Override public T visitVarDeclaration(MiniPascalGrammarParser.VarDeclarationContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -53,182 +56,336 @@ public class MiniPascalGrammarBaseVisitor<T> extends AbstractParseTreeVisitor<T>
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitArray_specifier(MiniPascalGrammarParser.Array_specifierContext ctx) { return visitChildren(ctx); }
+	@Override public T visitArraySpecifier(MiniPascalGrammarParser.ArraySpecifierContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitIndex_range(MiniPascalGrammarParser.Index_rangeContext ctx) { return visitChildren(ctx); }
+	@Override public T visitIndexRange(MiniPascalGrammarParser.IndexRangeContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitIndex(MiniPascalGrammarParser.IndexContext ctx) { return visitChildren(ctx); }
+	@Override public T visitIndice(MiniPascalGrammarParser.IndiceContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitType(MiniPascalGrammarParser.TypeContext ctx) { return visitChildren(ctx); }
+	@Override public T visitInteger(MiniPascalGrammarParser.IntegerContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitCompound_statement(MiniPascalGrammarParser.Compound_statementContext ctx) { return visitChildren(ctx); }
+	@Override public T visitReal(MiniPascalGrammarParser.RealContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitStatement_list(MiniPascalGrammarParser.Statement_listContext ctx) { return visitChildren(ctx); }
+	@Override public T visitBoolean(MiniPascalGrammarParser.BooleanContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitStatement(MiniPascalGrammarParser.StatementContext ctx) { return visitChildren(ctx); }
+	@Override public T visitChar(MiniPascalGrammarParser.CharContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAssignment_statement(MiniPascalGrammarParser.Assignment_statementContext ctx) { return visitChildren(ctx); }
+	@Override public T visitString(MiniPascalGrammarParser.StringContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitIf_statement(MiniPascalGrammarParser.If_statementContext ctx) { return visitChildren(ctx); }
+	@Override public T visitArray(MiniPascalGrammarParser.ArrayContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitWhile_statement(MiniPascalGrammarParser.While_statementContext ctx) { return visitChildren(ctx); }
+	@Override public T visitCompountStatement(MiniPascalGrammarParser.CompountStatementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitFor_statement(MiniPascalGrammarParser.For_statementContext ctx) { return visitChildren(ctx); }
+	@Override public T visitStatementList(MiniPascalGrammarParser.StatementListContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitRepeat_statement(MiniPascalGrammarParser.Repeat_statementContext ctx) { return visitChildren(ctx); }
+	@Override public T visitCompountStatementNonTerminal(MiniPascalGrammarParser.CompountStatementNonTerminalContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitWrite_statement(MiniPascalGrammarParser.Write_statementContext ctx) { return visitChildren(ctx); }
+	@Override public T visitAssignmentStatementNonTerminal(MiniPascalGrammarParser.AssignmentStatementNonTerminalContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitRead_statement(MiniPascalGrammarParser.Read_statementContext ctx) { return visitChildren(ctx); }
+	@Override public T visitIfStatementNonTerminal(MiniPascalGrammarParser.IfStatementNonTerminalContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitFunction_declaration(MiniPascalGrammarParser.Function_declarationContext ctx) { return visitChildren(ctx); }
+	@Override public T visitWhileStatementNonTerminal(MiniPascalGrammarParser.WhileStatementNonTerminalContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitParameter_list(MiniPascalGrammarParser.Parameter_listContext ctx) { return visitChildren(ctx); }
+	@Override public T visitForStatementNonTerminal(MiniPascalGrammarParser.ForStatementNonTerminalContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitParameter_declaration(MiniPascalGrammarParser.Parameter_declarationContext ctx) { return visitChildren(ctx); }
+	@Override public T visitRepeatStatementNonTerminal(MiniPascalGrammarParser.RepeatStatementNonTerminalContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitFunction_call(MiniPascalGrammarParser.Function_callContext ctx) { return visitChildren(ctx); }
+	@Override public T visitWriteStatementNonTerminal(MiniPascalGrammarParser.WriteStatementNonTerminalContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitArgument_list(MiniPascalGrammarParser.Argument_listContext ctx) { return visitChildren(ctx); }
+	@Override public T visitReadStatementNonTerminal(MiniPascalGrammarParser.ReadStatementNonTerminalContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitEnd_statement(MiniPascalGrammarParser.End_statementContext ctx) { return visitChildren(ctx); }
+	@Override public T visitFunctionStatementNonTerminal(MiniPascalGrammarParser.FunctionStatementNonTerminalContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitExpression(MiniPascalGrammarParser.ExpressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitAssignmentStatement(MiniPascalGrammarParser.AssignmentStatementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitSimple_expression(MiniPascalGrammarParser.Simple_expressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitIfStatement(MiniPascalGrammarParser.IfStatementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTerm(MiniPascalGrammarParser.TermContext ctx) { return visitChildren(ctx); }
+	@Override public T visitWhileStatement(MiniPascalGrammarParser.WhileStatementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitFactor(MiniPascalGrammarParser.FactorContext ctx) { return visitChildren(ctx); }
+	@Override public T visitForStatement(MiniPascalGrammarParser.ForStatementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitVariable(MiniPascalGrammarParser.VariableContext ctx) { return visitChildren(ctx); }
+	@Override public T visitRepeatStatement(MiniPascalGrammarParser.RepeatStatementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitIndex_access(MiniPascalGrammarParser.Index_accessContext ctx) { return visitChildren(ctx); }
+	@Override public T visitWriteStatement(MiniPascalGrammarParser.WriteStatementContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitReadStatement(MiniPascalGrammarParser.ReadStatementContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitFunctionDeclaration(MiniPascalGrammarParser.FunctionDeclarationContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitFunctionBlock(MiniPascalGrammarParser.FunctionBlockContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitFunctionEndStatement(MiniPascalGrammarParser.FunctionEndStatementContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitParameterList(MiniPascalGrammarParser.ParameterListContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitParameterDeclaration(MiniPascalGrammarParser.ParameterDeclarationContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitFunctionCall(MiniPascalGrammarParser.FunctionCallContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitArgumentList(MiniPascalGrammarParser.ArgumentListContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitEndStatement(MiniPascalGrammarParser.EndStatementContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitExpresion(MiniPascalGrammarParser.ExpresionContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitSimpleExpression(MiniPascalGrammarParser.SimpleExpressionContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitTermino(MiniPascalGrammarParser.TerminoContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitIdentifierTerminal(MiniPascalGrammarParser.IdentifierTerminalContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitNumberTerminal(MiniPascalGrammarParser.NumberTerminalContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitStringTerminal(MiniPascalGrammarParser.StringTerminalContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitCharTerminal(MiniPascalGrammarParser.CharTerminalContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitBetweenParentsExpression(MiniPascalGrammarParser.BetweenParentsExpressionContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitNotFactorOperator(MiniPascalGrammarParser.NotFactorOperatorContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitTrueOperator(MiniPascalGrammarParser.TrueOperatorContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitFalseOperator(MiniPascalGrammarParser.FalseOperatorContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitVariableNonTerminal(MiniPascalGrammarParser.VariableNonTerminalContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitIndexAccess(MiniPascalGrammarParser.IndexAccessContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
