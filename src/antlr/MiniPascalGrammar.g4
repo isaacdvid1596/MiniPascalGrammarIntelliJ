@@ -1,17 +1,5 @@
 grammar MiniPascalGrammar;
 
-<<<<<<< HEAD
-program : 'program' IDENTIFIER ';' block;
-block : var_declaration* function_declaration* compound_statement* program_end_marker;
-program_end_marker : '.';
-<<<<<<< HEAD
-block : var_declaration* function_declaration* compound_statement*;
-=======
->>>>>>> master
-var_declaration : 'var' (variable_declaration ';')*;
-variable_declaration : IDENTIFIER ':' type (array_specifier)?;
-array_specifier : 'array' '[' index_range ']' 'of';
-=======
 @header{
     package antlr;
 }
@@ -29,7 +17,6 @@ variable_declaration : IDENTIFIER ':' type (array_specifier)?
 ;
 array_specifier : 'array' '[' index_range ']' 'of' #ArraySpecifier
 ;
->>>>>>> isaacbranch
 index_range : NUMBER '..' NUMBER;
 index : NUMBER; //REMOVE?
 type : 'integer'
@@ -57,11 +44,7 @@ parameter_declaration: IDENTIFIER ':' type;
 function_call : IDENTIFIER '(' argument_list? ')';
 argument_list : (expression (',' expression)*) ;
 end_statement: 'end';
-<<<<<<< HEAD
-expression : simple_expression ((relop | 'and' | 'or' | ',') simple_expression)*;
-=======
 expression : simple_expression ((relop | 'and' | 'or') simple_expression)* ';'*;
->>>>>>> master
 simple_expression : term ((addop | 'or') term)*;
 term : factor (mulop factor)*;
 factor : IDENTIFIER (index_access | function_call | '(' expression ')' | ('not' factor))?
