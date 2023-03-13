@@ -4,16 +4,27 @@ grammar MiniPascalGrammar;
     package antlr;
 }
 
-program : 'program' IDENTIFIER ';' block;
-block : var_declaration* function_declaration* compound_statement* program_end_marker;
+program : 'program' IDENTIFIER ';' block #Programa
+;
+block : var_declaration* function_declaration* compound_statement* program_end_marker #Bloque
+;
 //(var_declaration function_declaration compound_statement)* program_end_marker;
-program_end_marker : '.';
-var_declaration : 'var' (variable_declaration ';')*;
-variable_declaration : IDENTIFIER ':' type (array_specifier)?;
-array_specifier : 'array' '[' index_range ']' 'of';
+program_end_marker : '.' #ProgramEndMarker
+;
+var_declaration : 'var' (variable_declaration ';')* #VarDeclaration
+;
+variable_declaration : IDENTIFIER ':' type (array_specifier)?
+;
+array_specifier : 'array' '[' index_range ']' 'of' #ArraySpecifier
+;
 index_range : NUMBER '..' NUMBER;
 index : NUMBER; //REMOVE?
-type : 'integer' | 'real' | 'boolean' | 'char' | 'string' | 'array' '[' index_range ']' 'of' type;
+type : 'integer'
+        | 'real'
+        | 'boolean'
+        | 'char'
+        | 'string'
+        | 'array' '[' index_range ']' 'of' type;
 //array_type: 'array'
 compound_statement : 'begin' statement_list end_statement*;
 statement_list : statement (';'statement?)*;
