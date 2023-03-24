@@ -5,5 +5,4 @@ begin
   write('What is your name?');
   read(name);
   write('Hello, ', name, '!');
-end
 end.
