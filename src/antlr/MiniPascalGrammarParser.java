@@ -1039,193 +1039,48 @@ public class MiniPascalGrammarParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class StatementContext extends ParserRuleContext {
+		public Compound_statementContext compound_statement() {
+			return getRuleContext(Compound_statementContext.class,0);
+		}
+		public Assignment_statementContext assignment_statement() {
+			return getRuleContext(Assignment_statementContext.class,0);
+		}
+		public If_statementContext if_statement() {
+			return getRuleContext(If_statementContext.class,0);
+		}
+		public While_statementContext while_statement() {
+			return getRuleContext(While_statementContext.class,0);
+		}
+		public For_statementContext for_statement() {
+			return getRuleContext(For_statementContext.class,0);
+		}
+		public Repeat_statementContext repeat_statement() {
+			return getRuleContext(Repeat_statementContext.class,0);
+		}
+		public Write_statementContext write_statement() {
+			return getRuleContext(Write_statementContext.class,0);
+		}
+		public Read_statementContext read_statement() {
+			return getRuleContext(Read_statementContext.class,0);
+		}
+		public Function_callContext function_call() {
+			return getRuleContext(Function_callContext.class,0);
+		}
 		public StatementContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_statement; }
-	 
-		public StatementContext() { }
-		public void copyFrom(StatementContext ctx) {
-			super.copyFrom(ctx);
-		}
-	}
-	@SuppressWarnings("CheckReturnValue")
-	public static class IfStatementNonTerminalContext extends StatementContext {
-		public If_statementContext if_statement() {
-			return getRuleContext(If_statementContext.class,0);
-		}
-		public IfStatementNonTerminalContext(StatementContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterIfStatementNonTerminal(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitIfStatementNonTerminal(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitStatement(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitIfStatementNonTerminal(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-	@SuppressWarnings("CheckReturnValue")
-	public static class RepeatStatementNonTerminalContext extends StatementContext {
-		public Repeat_statementContext repeat_statement() {
-			return getRuleContext(Repeat_statementContext.class,0);
-		}
-		public RepeatStatementNonTerminalContext(StatementContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterRepeatStatementNonTerminal(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitRepeatStatementNonTerminal(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitRepeatStatementNonTerminal(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-	@SuppressWarnings("CheckReturnValue")
-	public static class AssignmentStatementNonTerminalContext extends StatementContext {
-		public Assignment_statementContext assignment_statement() {
-			return getRuleContext(Assignment_statementContext.class,0);
-		}
-		public AssignmentStatementNonTerminalContext(StatementContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterAssignmentStatementNonTerminal(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitAssignmentStatementNonTerminal(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitAssignmentStatementNonTerminal(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-	@SuppressWarnings("CheckReturnValue")
-	public static class WhileStatementNonTerminalContext extends StatementContext {
-		public While_statementContext while_statement() {
-			return getRuleContext(While_statementContext.class,0);
-		}
-		public WhileStatementNonTerminalContext(StatementContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterWhileStatementNonTerminal(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitWhileStatementNonTerminal(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitWhileStatementNonTerminal(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-	@SuppressWarnings("CheckReturnValue")
-	public static class FunctionStatementNonTerminalContext extends StatementContext {
-		public Function_callContext function_call() {
-			return getRuleContext(Function_callContext.class,0);
-		}
-		public FunctionStatementNonTerminalContext(StatementContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterFunctionStatementNonTerminal(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitFunctionStatementNonTerminal(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitFunctionStatementNonTerminal(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-	@SuppressWarnings("CheckReturnValue")
-	public static class CompountStatementNonTerminalContext extends StatementContext {
-		public Compound_statementContext compound_statement() {
-			return getRuleContext(Compound_statementContext.class,0);
-		}
-		public CompountStatementNonTerminalContext(StatementContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterCompountStatementNonTerminal(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitCompountStatementNonTerminal(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitCompountStatementNonTerminal(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-	@SuppressWarnings("CheckReturnValue")
-	public static class ForStatementNonTerminalContext extends StatementContext {
-		public For_statementContext for_statement() {
-			return getRuleContext(For_statementContext.class,0);
-		}
-		public ForStatementNonTerminalContext(StatementContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterForStatementNonTerminal(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitForStatementNonTerminal(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitForStatementNonTerminal(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-	@SuppressWarnings("CheckReturnValue")
-	public static class ReadStatementNonTerminalContext extends StatementContext {
-		public Read_statementContext read_statement() {
-			return getRuleContext(Read_statementContext.class,0);
-		}
-		public ReadStatementNonTerminalContext(StatementContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterReadStatementNonTerminal(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitReadStatementNonTerminal(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitReadStatementNonTerminal(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-	@SuppressWarnings("CheckReturnValue")
-	public static class WriteStatementNonTerminalContext extends StatementContext {
-		public Write_statementContext write_statement() {
-			return getRuleContext(Write_statementContext.class,0);
-		}
-		public WriteStatementNonTerminalContext(StatementContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterWriteStatementNonTerminal(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitWriteStatementNonTerminal(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitWriteStatementNonTerminal(this);
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitStatement(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1238,7 +1093,6 @@ public class MiniPascalGrammarParser extends Parser {
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,9,_ctx) ) {
 			case 1:
-				_localctx = new CompountStatementNonTerminalContext(_localctx);
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(158);
@@ -1246,7 +1100,6 @@ public class MiniPascalGrammarParser extends Parser {
 				}
 				break;
 			case 2:
-				_localctx = new AssignmentStatementNonTerminalContext(_localctx);
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(159);
@@ -1254,7 +1107,6 @@ public class MiniPascalGrammarParser extends Parser {
 				}
 				break;
 			case 3:
-				_localctx = new IfStatementNonTerminalContext(_localctx);
 				enterOuterAlt(_localctx, 3);
 				{
 				setState(160);
@@ -1262,7 +1114,6 @@ public class MiniPascalGrammarParser extends Parser {
 				}
 				break;
 			case 4:
-				_localctx = new WhileStatementNonTerminalContext(_localctx);
 				enterOuterAlt(_localctx, 4);
 				{
 				setState(161);
@@ -1270,7 +1121,6 @@ public class MiniPascalGrammarParser extends Parser {
 				}
 				break;
 			case 5:
-				_localctx = new ForStatementNonTerminalContext(_localctx);
 				enterOuterAlt(_localctx, 5);
 				{
 				setState(162);
@@ -1278,7 +1128,6 @@ public class MiniPascalGrammarParser extends Parser {
 				}
 				break;
 			case 6:
-				_localctx = new RepeatStatementNonTerminalContext(_localctx);
 				enterOuterAlt(_localctx, 6);
 				{
 				setState(163);
@@ -1286,7 +1135,6 @@ public class MiniPascalGrammarParser extends Parser {
 				}
 				break;
 			case 7:
-				_localctx = new WriteStatementNonTerminalContext(_localctx);
 				enterOuterAlt(_localctx, 7);
 				{
 				setState(164);
@@ -1294,7 +1142,6 @@ public class MiniPascalGrammarParser extends Parser {
 				}
 				break;
 			case 8:
-				_localctx = new ReadStatementNonTerminalContext(_localctx);
 				enterOuterAlt(_localctx, 8);
 				{
 				setState(165);
@@ -1302,7 +1149,6 @@ public class MiniPascalGrammarParser extends Parser {
 				}
 				break;
 			case 9:
-				_localctx = new FunctionStatementNonTerminalContext(_localctx);
 				enterOuterAlt(_localctx, 9);
 				{
 				setState(166);

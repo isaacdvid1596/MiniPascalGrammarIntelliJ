@@ -124,68 +124,11 @@ public interface MiniPascalGrammarVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitStatementList(MiniPascalGrammarParser.StatementListContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code CompountStatementNonTerminal}
-	 * labeled alternative in {@link MiniPascalGrammarParser#statement}.
+	 * Visit a parse tree produced by {@link MiniPascalGrammarParser#statement}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitCompountStatementNonTerminal(MiniPascalGrammarParser.CompountStatementNonTerminalContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code AssignmentStatementNonTerminal}
-	 * labeled alternative in {@link MiniPascalGrammarParser#statement}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitAssignmentStatementNonTerminal(MiniPascalGrammarParser.AssignmentStatementNonTerminalContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code IfStatementNonTerminal}
-	 * labeled alternative in {@link MiniPascalGrammarParser#statement}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitIfStatementNonTerminal(MiniPascalGrammarParser.IfStatementNonTerminalContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code WhileStatementNonTerminal}
-	 * labeled alternative in {@link MiniPascalGrammarParser#statement}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitWhileStatementNonTerminal(MiniPascalGrammarParser.WhileStatementNonTerminalContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code ForStatementNonTerminal}
-	 * labeled alternative in {@link MiniPascalGrammarParser#statement}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitForStatementNonTerminal(MiniPascalGrammarParser.ForStatementNonTerminalContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code RepeatStatementNonTerminal}
-	 * labeled alternative in {@link MiniPascalGrammarParser#statement}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitRepeatStatementNonTerminal(MiniPascalGrammarParser.RepeatStatementNonTerminalContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code WriteStatementNonTerminal}
-	 * labeled alternative in {@link MiniPascalGrammarParser#statement}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitWriteStatementNonTerminal(MiniPascalGrammarParser.WriteStatementNonTerminalContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code ReadStatementNonTerminal}
-	 * labeled alternative in {@link MiniPascalGrammarParser#statement}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitReadStatementNonTerminal(MiniPascalGrammarParser.ReadStatementNonTerminalContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code FunctionStatementNonTerminal}
-	 * labeled alternative in {@link MiniPascalGrammarParser#statement}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitFunctionStatementNonTerminal(MiniPascalGrammarParser.FunctionStatementNonTerminalContext ctx);
+	T visitStatement(MiniPascalGrammarParser.StatementContext ctx);
 	/**
 	 * Visit a parse tree produced by the {@code AssignmentStatement}
 	 * labeled alternative in {@link MiniPascalGrammarParser#assignment_statement}.

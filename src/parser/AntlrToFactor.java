@@ -2,6 +2,9 @@ package parser;
 
 import antlr.MiniPascalGrammarBaseVisitor;
 import antlr.MiniPascalGrammarParser;
+import org.antlr.v4.runtime.Token;
+
+import javax.imageio.plugins.tiff.FaxTIFFTagSet;
 
 public class AntlrToFactor extends MiniPascalGrammarBaseVisitor<Factor> {
     @Override
@@ -25,27 +28,32 @@ public class AntlrToFactor extends MiniPascalGrammarBaseVisitor<Factor> {
     @Override
     public Factor visitCharTerminal(MiniPascalGrammarParser.CharTerminalContext ctx) {
         String text = ctx.getChild(0).getText();
+        Token charToken = ctx.CHAR().getSymbol();
         char ch = text.charAt(0);
         return new CharClass(ch);
     }
 
     @Override
     public Factor visitBetweenParentsExpression(MiniPascalGrammarParser.BetweenParentsExpressionContext ctx) {
-        return super.visitBetweenParentsExpression(ctx);
+        Factor factor = visit(ctx.getChild(1));
+        return factor;
     }
 
     @Override
     public Factor visitNotFactorOperator(MiniPascalGrammarParser.NotFactorOperatorContext ctx) {
-        return super.visitNotFactorOperator(ctx);
+        Factor factor = visit(ctx.getChild(0));
+        return factor;
     }
 
     @Override
     public Factor visitTrueOperator(MiniPascalGrammarParser.TrueOperatorContext ctx) {
-        return super.visitTrueOperator(ctx);
+        Factor factor = visit(ctx.getChild(0));
+        return factor;
     }
 
     @Override
     public Factor visitFalseOperator(MiniPascalGrammarParser.FalseOperatorContext ctx) {
-        return super.visitFalseOperator(ctx);
+        Factor factor = visit(ctx.getChild(0));
+        return factor;
     }
 }

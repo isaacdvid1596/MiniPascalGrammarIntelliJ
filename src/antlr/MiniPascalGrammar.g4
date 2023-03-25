@@ -33,15 +33,15 @@ compound_statement : 'begin' statement_list end_statement* #CompountStatement
 ;
 statement_list : statement (';'statement?)* #StatementList
 ;
-statement : compound_statement      #CompountStatementNonTerminal
-            | assignment_statement  #AssignmentStatementNonTerminal
-            | if_statement          #IfStatementNonTerminal
-            | while_statement       #WhileStatementNonTerminal
-            | for_statement         #ForStatementNonTerminal
-            | repeat_statement      #RepeatStatementNonTerminal
-            | write_statement       #WriteStatementNonTerminal
-            | read_statement        #ReadStatementNonTerminal
-            | function_call         #FunctionStatementNonTerminal
+statement : compound_statement
+            | assignment_statement
+            | if_statement
+            | while_statement
+            | for_statement
+            | repeat_statement
+            | write_statement
+            | read_statement
+            | function_call
             ;
 assignment_statement : variable ':=' (expression|function_call) #AssignmentStatement
 ;
