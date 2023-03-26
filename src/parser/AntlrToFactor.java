@@ -4,8 +4,6 @@ import antlr.MiniPascalGrammarBaseVisitor;
 import antlr.MiniPascalGrammarParser;
 import org.antlr.v4.runtime.Token;
 
-import javax.imageio.plugins.tiff.FaxTIFFTagSet;
-
 public class AntlrToFactor extends MiniPascalGrammarBaseVisitor<Factor> {
     @Override
     public Factor visitIdentifierTerminal(MiniPascalGrammarParser.IdentifierTerminalContext ctx) {
