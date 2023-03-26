@@ -20,6 +20,5 @@ public class AntlrToTerm extends MiniPascalGrammarBaseVisitor<Term> {
         }else{
             return new Term(factor);
         }
-
     }
 }
