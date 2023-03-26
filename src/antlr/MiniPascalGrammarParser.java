@@ -1,6 +1,7 @@
 // Generated from java-escape by ANTLR 4.11.1
-import antlr.MiniPascalGrammarListener;
-import antlr.MiniPascalGrammarVisitor;
+
+    package antlr;
+
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -127,25 +128,34 @@ public class MiniPascalGrammarParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class ProgramContext extends ParserRuleContext {
-		public TerminalNode IDENTIFIER() { return getToken(MiniPascalGrammarParser.IDENTIFIER, 0); }
-		public BlockContext block() {
-			return getRuleContext(BlockContext.class,0);
-		}
 		public ProgramContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_program; }
+	 
+		public ProgramContext() { }
+		public void copyFrom(ProgramContext ctx) {
+			super.copyFrom(ctx);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class ProgramaContext extends ProgramContext {
+		public TerminalNode IDENTIFIER() { return getToken(MiniPascalGrammarParser.IDENTIFIER, 0); }
+		public BlockContext block() {
+			return getRuleContext(BlockContext.class,0);
+		}
+		public ProgramaContext(ProgramContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener) ((MiniPascalGrammarListener)listener).enterProgram(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterPrograma(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitProgram(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitPrograma(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MiniPascalGrammarVisitor) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitProgram(this);
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitPrograma(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -154,6 +164,7 @@ public class MiniPascalGrammarParser extends Parser {
 		ProgramContext _localctx = new ProgramContext(_ctx, getState());
 		enterRule(_localctx, 0, RULE_program);
 		try {
+			_localctx = new ProgramaContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(72);
@@ -179,6 +190,18 @@ public class MiniPascalGrammarParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class BlockContext extends ParserRuleContext {
+		public BlockContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_block; }
+	 
+		public BlockContext() { }
+		public void copyFrom(BlockContext ctx) {
+			super.copyFrom(ctx);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class BloqueContext extends BlockContext {
 		public Program_end_markerContext program_end_marker() {
 			return getRuleContext(Program_end_markerContext.class,0);
 		}
@@ -200,21 +223,18 @@ public class MiniPascalGrammarParser extends Parser {
 		public Compound_statementContext compound_statement(int i) {
 			return getRuleContext(Compound_statementContext.class,i);
 		}
-		public BlockContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_block; }
+		public BloqueContext(BlockContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterBlock(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterBloque(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitBlock(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitBloque(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitBlock(this);
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitBloque(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -224,6 +244,7 @@ public class MiniPascalGrammarParser extends Parser {
 		enterRule(_localctx, 2, RULE_block);
 		int _la;
 		try {
+			_localctx = new BloqueContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(80);
@@ -289,17 +310,26 @@ public class MiniPascalGrammarParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_program_end_marker; }
+	 
+		public Program_end_markerContext() { }
+		public void copyFrom(Program_end_markerContext ctx) {
+			super.copyFrom(ctx);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class ProgramEndMarkerContext extends Program_end_markerContext {
+		public ProgramEndMarkerContext(Program_end_markerContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterProgram_end_marker(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterProgramEndMarker(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitProgram_end_marker(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitProgramEndMarker(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitProgram_end_marker(this);
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitProgramEndMarker(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -308,6 +338,7 @@ public class MiniPascalGrammarParser extends Parser {
 		Program_end_markerContext _localctx = new Program_end_markerContext(_ctx, getState());
 		enterRule(_localctx, 4, RULE_program_end_marker);
 		try {
+			_localctx = new ProgramEndMarkerContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(97);
@@ -327,27 +358,36 @@ public class MiniPascalGrammarParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class Var_declarationContext extends ParserRuleContext {
+		public Var_declarationContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_var_declaration; }
+	 
+		public Var_declarationContext() { }
+		public void copyFrom(Var_declarationContext ctx) {
+			super.copyFrom(ctx);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class VarDeclarationContext extends Var_declarationContext {
 		public List<Variable_declarationContext> variable_declaration() {
 			return getRuleContexts(Variable_declarationContext.class);
 		}
 		public Variable_declarationContext variable_declaration(int i) {
 			return getRuleContext(Variable_declarationContext.class,i);
 		}
-		public Var_declarationContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_var_declaration; }
+		public VarDeclarationContext(Var_declarationContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterVar_declaration(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterVarDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitVar_declaration(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitVarDeclaration(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitVar_declaration(this);
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitVarDeclaration(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -357,6 +397,7 @@ public class MiniPascalGrammarParser extends Parser {
 		enterRule(_localctx, 6, RULE_var_declaration);
 		int _la;
 		try {
+			_localctx = new VarDeclarationContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(99);
@@ -456,24 +497,33 @@ public class MiniPascalGrammarParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class Array_specifierContext extends ParserRuleContext {
-		public Index_rangeContext index_range() {
-			return getRuleContext(Index_rangeContext.class,0);
-		}
 		public Array_specifierContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_array_specifier; }
+	 
+		public Array_specifierContext() { }
+		public void copyFrom(Array_specifierContext ctx) {
+			super.copyFrom(ctx);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class ArraySpecifierContext extends Array_specifierContext {
+		public Index_rangeContext index_range() {
+			return getRuleContext(Index_rangeContext.class,0);
+		}
+		public ArraySpecifierContext(Array_specifierContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterArray_specifier(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterArraySpecifier(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitArray_specifier(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitArraySpecifier(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitArray_specifier(this);
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitArraySpecifier(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -482,6 +532,7 @@ public class MiniPascalGrammarParser extends Parser {
 		Array_specifierContext _localctx = new Array_specifierContext(_ctx, getState());
 		enterRule(_localctx, 10, RULE_array_specifier);
 		try {
+			_localctx = new ArraySpecifierContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(114);
@@ -509,25 +560,34 @@ public class MiniPascalGrammarParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class Index_rangeContext extends ParserRuleContext {
-		public List<TerminalNode> NUMBER() { return getTokens(MiniPascalGrammarParser.NUMBER); }
-		public TerminalNode NUMBER(int i) {
-			return getToken(MiniPascalGrammarParser.NUMBER, i);
-		}
 		public Index_rangeContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_index_range; }
+	 
+		public Index_rangeContext() { }
+		public void copyFrom(Index_rangeContext ctx) {
+			super.copyFrom(ctx);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class IndexRangeContext extends Index_rangeContext {
+		public List<TerminalNode> NUMBER() { return getTokens(MiniPascalGrammarParser.NUMBER); }
+		public TerminalNode NUMBER(int i) {
+			return getToken(MiniPascalGrammarParser.NUMBER, i);
+		}
+		public IndexRangeContext(Index_rangeContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterIndex_range(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterIndexRange(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitIndex_range(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitIndexRange(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitIndex_range(this);
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitIndexRange(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -536,6 +596,7 @@ public class MiniPascalGrammarParser extends Parser {
 		Index_rangeContext _localctx = new Index_rangeContext(_ctx, getState());
 		enterRule(_localctx, 12, RULE_index_range);
 		try {
+			_localctx = new IndexRangeContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(120);
@@ -559,22 +620,31 @@ public class MiniPascalGrammarParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class IndexContext extends ParserRuleContext {
-		public TerminalNode NUMBER() { return getToken(MiniPascalGrammarParser.NUMBER, 0); }
 		public IndexContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_index; }
+	 
+		public IndexContext() { }
+		public void copyFrom(IndexContext ctx) {
+			super.copyFrom(ctx);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class IndiceContext extends IndexContext {
+		public TerminalNode NUMBER() { return getToken(MiniPascalGrammarParser.NUMBER, 0); }
+		public IndiceContext(IndexContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterIndex(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterIndice(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitIndex(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitIndice(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitIndex(this);
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitIndice(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -583,6 +653,7 @@ public class MiniPascalGrammarParser extends Parser {
 		IndexContext _localctx = new IndexContext(_ctx, getState());
 		enterRule(_localctx, 14, RULE_index);
 		try {
+			_localctx = new IndiceContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(124);
@@ -602,27 +673,121 @@ public class MiniPascalGrammarParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class TypeContext extends ParserRuleContext {
+		public TypeContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_type; }
+	 
+		public TypeContext() { }
+		public void copyFrom(TypeContext ctx) {
+			super.copyFrom(ctx);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class IntegerContext extends TypeContext {
+		public IntegerContext(TypeContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterInteger(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitInteger(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitInteger(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class ArrayContext extends TypeContext {
 		public Index_rangeContext index_range() {
 			return getRuleContext(Index_rangeContext.class,0);
 		}
 		public TypeContext type() {
 			return getRuleContext(TypeContext.class,0);
 		}
-		public TypeContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_type; }
+		public ArrayContext(TypeContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterType(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterArray(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitType(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitArray(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitType(this);
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitArray(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class CharContext extends TypeContext {
+		public CharContext(TypeContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterChar(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitChar(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitChar(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class RealContext extends TypeContext {
+		public RealContext(TypeContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterReal(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitReal(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitReal(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class StringContext extends TypeContext {
+		public StringContext(TypeContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterString(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitString(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitString(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class BooleanContext extends TypeContext {
+		public BooleanContext(TypeContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterBoolean(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitBoolean(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitBoolean(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -635,6 +800,7 @@ public class MiniPascalGrammarParser extends Parser {
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case T__10:
+				_localctx = new IntegerContext(_localctx);
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(126);
@@ -642,6 +808,7 @@ public class MiniPascalGrammarParser extends Parser {
 				}
 				break;
 			case T__11:
+				_localctx = new RealContext(_localctx);
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(127);
@@ -649,6 +816,7 @@ public class MiniPascalGrammarParser extends Parser {
 				}
 				break;
 			case T__12:
+				_localctx = new BooleanContext(_localctx);
 				enterOuterAlt(_localctx, 3);
 				{
 				setState(128);
@@ -656,6 +824,7 @@ public class MiniPascalGrammarParser extends Parser {
 				}
 				break;
 			case T__13:
+				_localctx = new CharContext(_localctx);
 				enterOuterAlt(_localctx, 4);
 				{
 				setState(129);
@@ -663,6 +832,7 @@ public class MiniPascalGrammarParser extends Parser {
 				}
 				break;
 			case T__14:
+				_localctx = new StringContext(_localctx);
 				enterOuterAlt(_localctx, 5);
 				{
 				setState(130);
@@ -670,6 +840,7 @@ public class MiniPascalGrammarParser extends Parser {
 				}
 				break;
 			case T__5:
+				_localctx = new ArrayContext(_localctx);
 				enterOuterAlt(_localctx, 6);
 				{
 				setState(131);
@@ -703,6 +874,18 @@ public class MiniPascalGrammarParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class Compound_statementContext extends ParserRuleContext {
+		public Compound_statementContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_compound_statement; }
+	 
+		public Compound_statementContext() { }
+		public void copyFrom(Compound_statementContext ctx) {
+			super.copyFrom(ctx);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class CompountStatementContext extends Compound_statementContext {
 		public Statement_listContext statement_list() {
 			return getRuleContext(Statement_listContext.class,0);
 		}
@@ -712,21 +895,18 @@ public class MiniPascalGrammarParser extends Parser {
 		public End_statementContext end_statement(int i) {
 			return getRuleContext(End_statementContext.class,i);
 		}
-		public Compound_statementContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_compound_statement; }
+		public CompountStatementContext(Compound_statementContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterCompound_statement(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterCompountStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitCompound_statement(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitCompountStatement(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitCompound_statement(this);
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitCompountStatement(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -736,6 +916,7 @@ public class MiniPascalGrammarParser extends Parser {
 		enterRule(_localctx, 18, RULE_compound_statement);
 		try {
 			int _alt;
+			_localctx = new CompountStatementContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(140);
@@ -773,27 +954,36 @@ public class MiniPascalGrammarParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class Statement_listContext extends ParserRuleContext {
+		public Statement_listContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_statement_list; }
+	 
+		public Statement_listContext() { }
+		public void copyFrom(Statement_listContext ctx) {
+			super.copyFrom(ctx);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class StatementListContext extends Statement_listContext {
 		public List<StatementContext> statement() {
 			return getRuleContexts(StatementContext.class);
 		}
 		public StatementContext statement(int i) {
 			return getRuleContext(StatementContext.class,i);
 		}
-		public Statement_listContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_statement_list; }
+		public StatementListContext(Statement_listContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterStatement_list(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterStatementList(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitStatement_list(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitStatementList(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitStatement_list(this);
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitStatementList(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -803,6 +993,7 @@ public class MiniPascalGrammarParser extends Parser {
 		enterRule(_localctx, 20, RULE_statement_list);
 		try {
 			int _alt;
+			_localctx = new StatementListContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(148);
@@ -979,6 +1170,18 @@ public class MiniPascalGrammarParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class Assignment_statementContext extends ParserRuleContext {
+		public Assignment_statementContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_assignment_statement; }
+	 
+		public Assignment_statementContext() { }
+		public void copyFrom(Assignment_statementContext ctx) {
+			super.copyFrom(ctx);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class AssignmentStatementContext extends Assignment_statementContext {
 		public VariableContext variable() {
 			return getRuleContext(VariableContext.class,0);
 		}
@@ -988,21 +1191,18 @@ public class MiniPascalGrammarParser extends Parser {
 		public Function_callContext function_call() {
 			return getRuleContext(Function_callContext.class,0);
 		}
-		public Assignment_statementContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_assignment_statement; }
+		public AssignmentStatementContext(Assignment_statementContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterAssignment_statement(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterAssignmentStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitAssignment_statement(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitAssignmentStatement(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitAssignment_statement(this);
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitAssignmentStatement(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1011,6 +1211,7 @@ public class MiniPascalGrammarParser extends Parser {
 		Assignment_statementContext _localctx = new Assignment_statementContext(_ctx, getState());
 		enterRule(_localctx, 24, RULE_assignment_statement);
 		try {
+			_localctx = new AssignmentStatementContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(169);
@@ -1048,6 +1249,18 @@ public class MiniPascalGrammarParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class If_statementContext extends ParserRuleContext {
+		public If_statementContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_if_statement; }
+	 
+		public If_statementContext() { }
+		public void copyFrom(If_statementContext ctx) {
+			super.copyFrom(ctx);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class IfStatementContext extends If_statementContext {
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class,0);
 		}
@@ -1057,21 +1270,18 @@ public class MiniPascalGrammarParser extends Parser {
 		public StatementContext statement(int i) {
 			return getRuleContext(StatementContext.class,i);
 		}
-		public If_statementContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_if_statement; }
+		public IfStatementContext(If_statementContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterIf_statement(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterIfStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitIf_statement(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitIfStatement(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitIf_statement(this);
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitIfStatement(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1080,6 +1290,7 @@ public class MiniPascalGrammarParser extends Parser {
 		If_statementContext _localctx = new If_statementContext(_ctx, getState());
 		enterRule(_localctx, 26, RULE_if_statement);
 		try {
+			_localctx = new IfStatementContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(175);
@@ -1117,27 +1328,36 @@ public class MiniPascalGrammarParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class While_statementContext extends ParserRuleContext {
+		public While_statementContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_while_statement; }
+	 
+		public While_statementContext() { }
+		public void copyFrom(While_statementContext ctx) {
+			super.copyFrom(ctx);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class WhileStatementContext extends While_statementContext {
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class,0);
 		}
 		public StatementContext statement() {
 			return getRuleContext(StatementContext.class,0);
 		}
-		public While_statementContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_while_statement; }
+		public WhileStatementContext(While_statementContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterWhile_statement(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterWhileStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitWhile_statement(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitWhileStatement(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitWhile_statement(this);
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitWhileStatement(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1146,6 +1366,7 @@ public class MiniPascalGrammarParser extends Parser {
 		While_statementContext _localctx = new While_statementContext(_ctx, getState());
 		enterRule(_localctx, 28, RULE_while_statement);
 		try {
+			_localctx = new WhileStatementContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(183);
@@ -1171,6 +1392,18 @@ public class MiniPascalGrammarParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class For_statementContext extends ParserRuleContext {
+		public For_statementContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_for_statement; }
+	 
+		public For_statementContext() { }
+		public void copyFrom(For_statementContext ctx) {
+			super.copyFrom(ctx);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class ForStatementContext extends For_statementContext {
 		public TerminalNode IDENTIFIER() { return getToken(MiniPascalGrammarParser.IDENTIFIER, 0); }
 		public List<ExpressionContext> expression() {
 			return getRuleContexts(ExpressionContext.class);
@@ -1181,21 +1414,18 @@ public class MiniPascalGrammarParser extends Parser {
 		public StatementContext statement() {
 			return getRuleContext(StatementContext.class,0);
 		}
-		public For_statementContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_for_statement; }
+		public ForStatementContext(For_statementContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterFor_statement(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterForStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitFor_statement(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitForStatement(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitFor_statement(this);
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitForStatement(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1204,6 +1434,7 @@ public class MiniPascalGrammarParser extends Parser {
 		For_statementContext _localctx = new For_statementContext(_ctx, getState());
 		enterRule(_localctx, 30, RULE_for_statement);
 		try {
+			_localctx = new ForStatementContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(188);
@@ -1237,27 +1468,36 @@ public class MiniPascalGrammarParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class Repeat_statementContext extends ParserRuleContext {
+		public Repeat_statementContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_repeat_statement; }
+	 
+		public Repeat_statementContext() { }
+		public void copyFrom(Repeat_statementContext ctx) {
+			super.copyFrom(ctx);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class RepeatStatementContext extends Repeat_statementContext {
 		public Statement_listContext statement_list() {
 			return getRuleContext(Statement_listContext.class,0);
 		}
 		public ExpressionContext expression() {
 			return getRuleContext(ExpressionContext.class,0);
 		}
-		public Repeat_statementContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_repeat_statement; }
+		public RepeatStatementContext(Repeat_statementContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterRepeat_statement(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterRepeatStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitRepeat_statement(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitRepeatStatement(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitRepeat_statement(this);
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitRepeatStatement(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1266,6 +1506,7 @@ public class MiniPascalGrammarParser extends Parser {
 		Repeat_statementContext _localctx = new Repeat_statementContext(_ctx, getState());
 		enterRule(_localctx, 32, RULE_repeat_statement);
 		try {
+			_localctx = new RepeatStatementContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(197);
@@ -1291,24 +1532,33 @@ public class MiniPascalGrammarParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class Write_statementContext extends ParserRuleContext {
-		public ExpressionContext expression() {
-			return getRuleContext(ExpressionContext.class,0);
-		}
 		public Write_statementContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_write_statement; }
+	 
+		public Write_statementContext() { }
+		public void copyFrom(Write_statementContext ctx) {
+			super.copyFrom(ctx);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class WriteStatementContext extends Write_statementContext {
+		public ExpressionContext expression() {
+			return getRuleContext(ExpressionContext.class,0);
+		}
+		public WriteStatementContext(Write_statementContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterWrite_statement(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterWriteStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitWrite_statement(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitWriteStatement(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitWrite_statement(this);
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitWriteStatement(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1317,6 +1567,7 @@ public class MiniPascalGrammarParser extends Parser {
 		Write_statementContext _localctx = new Write_statementContext(_ctx, getState());
 		enterRule(_localctx, 34, RULE_write_statement);
 		try {
+			_localctx = new WriteStatementContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(202);
@@ -1342,27 +1593,36 @@ public class MiniPascalGrammarParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class Read_statementContext extends ParserRuleContext {
+		public Read_statementContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_read_statement; }
+	 
+		public Read_statementContext() { }
+		public void copyFrom(Read_statementContext ctx) {
+			super.copyFrom(ctx);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class ReadStatementContext extends Read_statementContext {
 		public List<VariableContext> variable() {
 			return getRuleContexts(VariableContext.class);
 		}
 		public VariableContext variable(int i) {
 			return getRuleContext(VariableContext.class,i);
 		}
-		public Read_statementContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_read_statement; }
+		public ReadStatementContext(Read_statementContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterRead_statement(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterReadStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitRead_statement(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitReadStatement(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitRead_statement(this);
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitReadStatement(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1372,6 +1632,7 @@ public class MiniPascalGrammarParser extends Parser {
 		enterRule(_localctx, 36, RULE_read_statement);
 		int _la;
 		try {
+			_localctx = new ReadStatementContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(207);
@@ -1413,6 +1674,18 @@ public class MiniPascalGrammarParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class Function_declarationContext extends ParserRuleContext {
+		public Function_declarationContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_function_declaration; }
+	 
+		public Function_declarationContext() { }
+		public void copyFrom(Function_declarationContext ctx) {
+			super.copyFrom(ctx);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class FunctionDeclarationContext extends Function_declarationContext {
 		public TerminalNode IDENTIFIER() { return getToken(MiniPascalGrammarParser.IDENTIFIER, 0); }
 		public Parameter_listContext parameter_list() {
 			return getRuleContext(Parameter_listContext.class,0);
@@ -1423,21 +1696,18 @@ public class MiniPascalGrammarParser extends Parser {
 		public Function_blockContext function_block() {
 			return getRuleContext(Function_blockContext.class,0);
 		}
-		public Function_declarationContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_function_declaration; }
+		public FunctionDeclarationContext(Function_declarationContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterFunction_declaration(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterFunctionDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitFunction_declaration(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitFunctionDeclaration(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitFunction_declaration(this);
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitFunctionDeclaration(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1446,6 +1716,7 @@ public class MiniPascalGrammarParser extends Parser {
 		Function_declarationContext _localctx = new Function_declarationContext(_ctx, getState());
 		enterRule(_localctx, 38, RULE_function_declaration);
 		try {
+			_localctx = new FunctionDeclarationContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(219);
@@ -1481,6 +1752,18 @@ public class MiniPascalGrammarParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class Function_blockContext extends ParserRuleContext {
+		public Function_blockContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_function_block; }
+	 
+		public Function_blockContext() { }
+		public void copyFrom(Function_blockContext ctx) {
+			super.copyFrom(ctx);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class FunctionBlockContext extends Function_blockContext {
 		public Compound_statementContext compound_statement() {
 			return getRuleContext(Compound_statementContext.class,0);
 		}
@@ -1493,21 +1776,18 @@ public class MiniPascalGrammarParser extends Parser {
 		public Var_declarationContext var_declaration(int i) {
 			return getRuleContext(Var_declarationContext.class,i);
 		}
-		public Function_blockContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_function_block; }
+		public FunctionBlockContext(Function_blockContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterFunction_block(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterFunctionBlock(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitFunction_block(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitFunctionBlock(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitFunction_block(this);
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitFunctionBlock(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1517,6 +1797,7 @@ public class MiniPascalGrammarParser extends Parser {
 		enterRule(_localctx, 40, RULE_function_block);
 		int _la;
 		try {
+			_localctx = new FunctionBlockContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(232);
@@ -1556,17 +1837,26 @@ public class MiniPascalGrammarParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_function_end_statement; }
+	 
+		public Function_end_statementContext() { }
+		public void copyFrom(Function_end_statementContext ctx) {
+			super.copyFrom(ctx);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class FunctionEndStatementContext extends Function_end_statementContext {
+		public FunctionEndStatementContext(Function_end_statementContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterFunction_end_statement(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterFunctionEndStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitFunction_end_statement(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitFunctionEndStatement(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitFunction_end_statement(this);
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitFunctionEndStatement(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1575,6 +1865,7 @@ public class MiniPascalGrammarParser extends Parser {
 		Function_end_statementContext _localctx = new Function_end_statementContext(_ctx, getState());
 		enterRule(_localctx, 42, RULE_function_end_statement);
 		try {
+			_localctx = new FunctionEndStatementContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(238);
@@ -1594,27 +1885,36 @@ public class MiniPascalGrammarParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class Parameter_listContext extends ParserRuleContext {
+		public Parameter_listContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_parameter_list; }
+	 
+		public Parameter_listContext() { }
+		public void copyFrom(Parameter_listContext ctx) {
+			super.copyFrom(ctx);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class ParameterListContext extends Parameter_listContext {
 		public List<Parameter_declarationContext> parameter_declaration() {
 			return getRuleContexts(Parameter_declarationContext.class);
 		}
 		public Parameter_declarationContext parameter_declaration(int i) {
 			return getRuleContext(Parameter_declarationContext.class,i);
 		}
-		public Parameter_listContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_parameter_list; }
+		public ParameterListContext(Parameter_listContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterParameter_list(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterParameterList(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitParameter_list(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitParameterList(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitParameter_list(this);
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitParameterList(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1624,6 +1924,7 @@ public class MiniPascalGrammarParser extends Parser {
 		enterRule(_localctx, 44, RULE_parameter_list);
 		int _la;
 		try {
+			_localctx = new ParameterListContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(248);
@@ -1667,25 +1968,34 @@ public class MiniPascalGrammarParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class Parameter_declarationContext extends ParserRuleContext {
-		public TerminalNode IDENTIFIER() { return getToken(MiniPascalGrammarParser.IDENTIFIER, 0); }
-		public TypeContext type() {
-			return getRuleContext(TypeContext.class,0);
-		}
 		public Parameter_declarationContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_parameter_declaration; }
+	 
+		public Parameter_declarationContext() { }
+		public void copyFrom(Parameter_declarationContext ctx) {
+			super.copyFrom(ctx);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class ParameterDeclarationContext extends Parameter_declarationContext {
+		public TerminalNode IDENTIFIER() { return getToken(MiniPascalGrammarParser.IDENTIFIER, 0); }
+		public TypeContext type() {
+			return getRuleContext(TypeContext.class,0);
+		}
+		public ParameterDeclarationContext(Parameter_declarationContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterParameter_declaration(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterParameterDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitParameter_declaration(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitParameterDeclaration(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitParameter_declaration(this);
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitParameterDeclaration(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1694,6 +2004,7 @@ public class MiniPascalGrammarParser extends Parser {
 		Parameter_declarationContext _localctx = new Parameter_declarationContext(_ctx, getState());
 		enterRule(_localctx, 46, RULE_parameter_declaration);
 		try {
+			_localctx = new ParameterDeclarationContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(250);
@@ -1717,25 +2028,34 @@ public class MiniPascalGrammarParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class Function_callContext extends ParserRuleContext {
-		public TerminalNode IDENTIFIER() { return getToken(MiniPascalGrammarParser.IDENTIFIER, 0); }
-		public Argument_listContext argument_list() {
-			return getRuleContext(Argument_listContext.class,0);
-		}
 		public Function_callContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_function_call; }
+	 
+		public Function_callContext() { }
+		public void copyFrom(Function_callContext ctx) {
+			super.copyFrom(ctx);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class FunctionCallContext extends Function_callContext {
+		public TerminalNode IDENTIFIER() { return getToken(MiniPascalGrammarParser.IDENTIFIER, 0); }
+		public Argument_listContext argument_list() {
+			return getRuleContext(Argument_listContext.class,0);
+		}
+		public FunctionCallContext(Function_callContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterFunction_call(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterFunctionCall(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitFunction_call(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitFunctionCall(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitFunction_call(this);
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitFunctionCall(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1745,6 +2065,7 @@ public class MiniPascalGrammarParser extends Parser {
 		enterRule(_localctx, 48, RULE_function_call);
 		int _la;
 		try {
+			_localctx = new FunctionCallContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(254);
@@ -1778,27 +2099,36 @@ public class MiniPascalGrammarParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class Argument_listContext extends ParserRuleContext {
+		public Argument_listContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_argument_list; }
+	 
+		public Argument_listContext() { }
+		public void copyFrom(Argument_listContext ctx) {
+			super.copyFrom(ctx);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class ArgumentListContext extends Argument_listContext {
 		public List<ExpressionContext> expression() {
 			return getRuleContexts(ExpressionContext.class);
 		}
 		public ExpressionContext expression(int i) {
 			return getRuleContext(ExpressionContext.class,i);
 		}
-		public Argument_listContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_argument_list; }
+		public ArgumentListContext(Argument_listContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterArgument_list(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterArgumentList(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitArgument_list(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitArgumentList(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitArgument_list(this);
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitArgumentList(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1808,6 +2138,7 @@ public class MiniPascalGrammarParser extends Parser {
 		enterRule(_localctx, 50, RULE_argument_list);
 		int _la;
 		try {
+			_localctx = new ArgumentListContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
 			{
@@ -1849,17 +2180,26 @@ public class MiniPascalGrammarParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_end_statement; }
+	 
+		public End_statementContext() { }
+		public void copyFrom(End_statementContext ctx) {
+			super.copyFrom(ctx);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class EndStatementContext extends End_statementContext {
+		public EndStatementContext(End_statementContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterEnd_statement(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterEndStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitEnd_statement(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitEndStatement(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitEnd_statement(this);
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitEndStatement(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1868,6 +2208,7 @@ public class MiniPascalGrammarParser extends Parser {
 		End_statementContext _localctx = new End_statementContext(_ctx, getState());
 		enterRule(_localctx, 52, RULE_end_statement);
 		try {
+			_localctx = new EndStatementContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(269);
@@ -1887,6 +2228,18 @@ public class MiniPascalGrammarParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class ExpressionContext extends ParserRuleContext {
+		public ExpressionContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_expression; }
+	 
+		public ExpressionContext() { }
+		public void copyFrom(ExpressionContext ctx) {
+			super.copyFrom(ctx);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class ExpresionContext extends ExpressionContext {
 		public List<Simple_expressionContext> simple_expression() {
 			return getRuleContexts(Simple_expressionContext.class);
 		}
@@ -1899,21 +2252,18 @@ public class MiniPascalGrammarParser extends Parser {
 		public RelopContext relop(int i) {
 			return getRuleContext(RelopContext.class,i);
 		}
-		public ExpressionContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_expression; }
+		public ExpresionContext(ExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterExpression(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterExpresion(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitExpression(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitExpresion(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitExpression(this);
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitExpresion(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1924,6 +2274,7 @@ public class MiniPascalGrammarParser extends Parser {
 		int _la;
 		try {
 			int _alt;
+			_localctx = new ExpresionContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(271);
@@ -2002,6 +2353,18 @@ public class MiniPascalGrammarParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class Simple_expressionContext extends ParserRuleContext {
+		public Simple_expressionContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_simple_expression; }
+	 
+		public Simple_expressionContext() { }
+		public void copyFrom(Simple_expressionContext ctx) {
+			super.copyFrom(ctx);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class SimpleExpressionContext extends Simple_expressionContext {
 		public List<TermContext> term() {
 			return getRuleContexts(TermContext.class);
 		}
@@ -2014,21 +2377,18 @@ public class MiniPascalGrammarParser extends Parser {
 		public AddopContext addop(int i) {
 			return getRuleContext(AddopContext.class,i);
 		}
-		public Simple_expressionContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_simple_expression; }
+		public SimpleExpressionContext(Simple_expressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterSimple_expression(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterSimpleExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitSimple_expression(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitSimpleExpression(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitSimple_expression(this);
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitSimpleExpression(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -2038,6 +2398,7 @@ public class MiniPascalGrammarParser extends Parser {
 		enterRule(_localctx, 56, RULE_simple_expression);
 		try {
 			int _alt;
+			_localctx = new SimpleExpressionContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(289);
@@ -2092,6 +2453,18 @@ public class MiniPascalGrammarParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class TermContext extends ParserRuleContext {
+		public TermContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_term; }
+	 
+		public TermContext() { }
+		public void copyFrom(TermContext ctx) {
+			super.copyFrom(ctx);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class TerminoContext extends TermContext {
 		public List<FactorContext> factor() {
 			return getRuleContexts(FactorContext.class);
 		}
@@ -2104,21 +2477,18 @@ public class MiniPascalGrammarParser extends Parser {
 		public MulopContext mulop(int i) {
 			return getRuleContext(MulopContext.class,i);
 		}
-		public TermContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_term; }
+		public TerminoContext(TermContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterTerm(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterTermino(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitTerm(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitTermino(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitTerm(this);
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitTermino(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -2128,6 +2498,7 @@ public class MiniPascalGrammarParser extends Parser {
 		enterRule(_localctx, 58, RULE_term);
 		int _la;
 		try {
+			_localctx = new TerminoContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(300);
@@ -2163,6 +2534,108 @@ public class MiniPascalGrammarParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class FactorContext extends ParserRuleContext {
+		public FactorContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_factor; }
+	 
+		public FactorContext() { }
+		public void copyFrom(FactorContext ctx) {
+			super.copyFrom(ctx);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class StringTerminalContext extends FactorContext {
+		public TerminalNode STRING() { return getToken(MiniPascalGrammarParser.STRING, 0); }
+		public StringTerminalContext(FactorContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterStringTerminal(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitStringTerminal(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitStringTerminal(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class CharTerminalContext extends FactorContext {
+		public TerminalNode CHAR() { return getToken(MiniPascalGrammarParser.CHAR, 0); }
+		public CharTerminalContext(FactorContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterCharTerminal(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitCharTerminal(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitCharTerminal(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class TrueOperatorContext extends FactorContext {
+		public TrueOperatorContext(FactorContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterTrueOperator(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitTrueOperator(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitTrueOperator(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class FalseOperatorContext extends FactorContext {
+		public FalseOperatorContext(FactorContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterFalseOperator(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitFalseOperator(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitFalseOperator(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class NotFactorOperatorContext extends FactorContext {
+		public FactorContext factor() {
+			return getRuleContext(FactorContext.class,0);
+		}
+		public NotFactorOperatorContext(FactorContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterNotFactorOperator(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitNotFactorOperator(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitNotFactorOperator(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class IdentifierTerminalContext extends FactorContext {
 		public TerminalNode IDENTIFIER() { return getToken(MiniPascalGrammarParser.IDENTIFIER, 0); }
 		public Index_accessContext index_access() {
 			return getRuleContext(Index_accessContext.class,0);
@@ -2176,24 +2649,56 @@ public class MiniPascalGrammarParser extends Parser {
 		public FactorContext factor() {
 			return getRuleContext(FactorContext.class,0);
 		}
-		public TerminalNode NUMBER() { return getToken(MiniPascalGrammarParser.NUMBER, 0); }
-		public TerminalNode STRING() { return getToken(MiniPascalGrammarParser.STRING, 0); }
-		public TerminalNode CHAR() { return getToken(MiniPascalGrammarParser.CHAR, 0); }
-		public FactorContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_factor; }
+		public IdentifierTerminalContext(FactorContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterFactor(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterIdentifierTerminal(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitFactor(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitIdentifierTerminal(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitFactor(this);
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitIdentifierTerminal(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class BetweenParentsExpressionContext extends FactorContext {
+		public ExpressionContext expression() {
+			return getRuleContext(ExpressionContext.class,0);
+		}
+		public BetweenParentsExpressionContext(FactorContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterBetweenParentsExpression(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitBetweenParentsExpression(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitBetweenParentsExpression(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class NumberTerminalContext extends FactorContext {
+		public TerminalNode NUMBER() { return getToken(MiniPascalGrammarParser.NUMBER, 0); }
+		public NumberTerminalContext(FactorContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterNumberTerminal(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitNumberTerminal(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitNumberTerminal(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -2206,6 +2711,7 @@ public class MiniPascalGrammarParser extends Parser {
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case IDENTIFIER:
+				_localctx = new IdentifierTerminalContext(_localctx);
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(309);
@@ -2279,6 +2785,7 @@ public class MiniPascalGrammarParser extends Parser {
 				}
 				break;
 			case NUMBER:
+				_localctx = new NumberTerminalContext(_localctx);
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(320);
@@ -2286,6 +2793,7 @@ public class MiniPascalGrammarParser extends Parser {
 				}
 				break;
 			case STRING:
+				_localctx = new StringTerminalContext(_localctx);
 				enterOuterAlt(_localctx, 3);
 				{
 				setState(321);
@@ -2293,6 +2801,7 @@ public class MiniPascalGrammarParser extends Parser {
 				}
 				break;
 			case CHAR:
+				_localctx = new CharTerminalContext(_localctx);
 				enterOuterAlt(_localctx, 4);
 				{
 				setState(322);
@@ -2300,6 +2809,7 @@ public class MiniPascalGrammarParser extends Parser {
 				}
 				break;
 			case T__27:
+				_localctx = new BetweenParentsExpressionContext(_localctx);
 				enterOuterAlt(_localctx, 5);
 				{
 				setState(323);
@@ -2311,6 +2821,7 @@ public class MiniPascalGrammarParser extends Parser {
 				}
 				break;
 			case T__36:
+				_localctx = new NotFactorOperatorContext(_localctx);
 				enterOuterAlt(_localctx, 6);
 				{
 				setState(327);
@@ -2320,6 +2831,7 @@ public class MiniPascalGrammarParser extends Parser {
 				}
 				break;
 			case T__37:
+				_localctx = new TrueOperatorContext(_localctx);
 				enterOuterAlt(_localctx, 7);
 				{
 				setState(329);
@@ -2327,6 +2839,7 @@ public class MiniPascalGrammarParser extends Parser {
 				}
 				break;
 			case T__38:
+				_localctx = new FalseOperatorContext(_localctx);
 				enterOuterAlt(_localctx, 8);
 				{
 				setState(330);
@@ -2350,25 +2863,34 @@ public class MiniPascalGrammarParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class VariableContext extends ParserRuleContext {
-		public TerminalNode IDENTIFIER() { return getToken(MiniPascalGrammarParser.IDENTIFIER, 0); }
-		public Index_accessContext index_access() {
-			return getRuleContext(Index_accessContext.class,0);
-		}
 		public VariableContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_variable; }
+	 
+		public VariableContext() { }
+		public void copyFrom(VariableContext ctx) {
+			super.copyFrom(ctx);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class VariableNonTerminalContext extends VariableContext {
+		public TerminalNode IDENTIFIER() { return getToken(MiniPascalGrammarParser.IDENTIFIER, 0); }
+		public Index_accessContext index_access() {
+			return getRuleContext(Index_accessContext.class,0);
+		}
+		public VariableNonTerminalContext(VariableContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterVariable(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterVariableNonTerminal(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitVariable(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitVariableNonTerminal(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitVariable(this);
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitVariableNonTerminal(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -2378,6 +2900,7 @@ public class MiniPascalGrammarParser extends Parser {
 		enterRule(_localctx, 62, RULE_variable);
 		int _la;
 		try {
+			_localctx = new VariableNonTerminalContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(333);
@@ -2407,27 +2930,36 @@ public class MiniPascalGrammarParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class Index_accessContext extends ParserRuleContext {
+		public Index_accessContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_index_access; }
+	 
+		public Index_accessContext() { }
+		public void copyFrom(Index_accessContext ctx) {
+			super.copyFrom(ctx);
+		}
+	}
+	@SuppressWarnings("CheckReturnValue")
+	public static class IndexAccessContext extends Index_accessContext {
 		public List<ExpressionContext> expression() {
 			return getRuleContexts(ExpressionContext.class);
 		}
 		public ExpressionContext expression(int i) {
 			return getRuleContext(ExpressionContext.class,i);
 		}
-		public Index_accessContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_index_access; }
+		public IndexAccessContext(Index_accessContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterIndex_access(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).enterIndexAccess(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitIndex_access(this);
+			if ( listener instanceof MiniPascalGrammarListener ) ((MiniPascalGrammarListener)listener).exitIndexAccess(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitIndex_access(this);
+			if ( visitor instanceof MiniPascalGrammarVisitor ) return ((MiniPascalGrammarVisitor<? extends T>)visitor).visitIndexAccess(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -2437,6 +2969,7 @@ public class MiniPascalGrammarParser extends Parser {
 		enterRule(_localctx, 64, RULE_index_access);
 		int _la;
 		try {
+			_localctx = new IndexAccessContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(337);
