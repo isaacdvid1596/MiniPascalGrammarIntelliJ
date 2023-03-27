@@ -4,13 +4,8 @@ public class Program {
     private Block block;
     private String identifier;
 
-    public Program(Block block,String identifier){
-        this.block = block;
+    public Program(String identifier,Block block){
         this.identifier = identifier;
+        this.block = block;
     }
-
-//    @Override
-//    public String toString() {
-//        return "program "+this.identifier+";"+'\n'+this.block;
-//    }
 }
