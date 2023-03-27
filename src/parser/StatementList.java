@@ -8,4 +8,7 @@ public class StatementList {
         CurrentStatement = currentStatement;
         NextStatement = nextStatement;
     }
+    public StatementList(Statement currentStatement) {
+        CurrentStatement = currentStatement;
+    }
 }

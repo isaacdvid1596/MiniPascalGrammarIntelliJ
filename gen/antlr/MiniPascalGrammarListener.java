@@ -201,113 +201,15 @@ public interface MiniPascalGrammarListener extends ParseTreeListener {
 	 */
 	void exitStatementList(MiniPascalGrammarParser.StatementListContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code CompountStatementNonTerminal}
-	 * labeled alternative in {@link MiniPascalGrammarParser#statement}.
+	 * Enter a parse tree produced by {@link MiniPascalGrammarParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void enterCompountStatementNonTerminal(MiniPascalGrammarParser.CompountStatementNonTerminalContext ctx);
+	void enterStatement(MiniPascalGrammarParser.StatementContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code CompountStatementNonTerminal}
-	 * labeled alternative in {@link MiniPascalGrammarParser#statement}.
+	 * Exit a parse tree produced by {@link MiniPascalGrammarParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void exitCompountStatementNonTerminal(MiniPascalGrammarParser.CompountStatementNonTerminalContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code AssignmentStatementNonTerminal}
-	 * labeled alternative in {@link MiniPascalGrammarParser#statement}.
-	 * @param ctx the parse tree
-	 */
-	void enterAssignmentStatementNonTerminal(MiniPascalGrammarParser.AssignmentStatementNonTerminalContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code AssignmentStatementNonTerminal}
-	 * labeled alternative in {@link MiniPascalGrammarParser#statement}.
-	 * @param ctx the parse tree
-	 */
-	void exitAssignmentStatementNonTerminal(MiniPascalGrammarParser.AssignmentStatementNonTerminalContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code IfStatementNonTerminal}
-	 * labeled alternative in {@link MiniPascalGrammarParser#statement}.
-	 * @param ctx the parse tree
-	 */
-	void enterIfStatementNonTerminal(MiniPascalGrammarParser.IfStatementNonTerminalContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code IfStatementNonTerminal}
-	 * labeled alternative in {@link MiniPascalGrammarParser#statement}.
-	 * @param ctx the parse tree
-	 */
-	void exitIfStatementNonTerminal(MiniPascalGrammarParser.IfStatementNonTerminalContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code WhileStatementNonTerminal}
-	 * labeled alternative in {@link MiniPascalGrammarParser#statement}.
-	 * @param ctx the parse tree
-	 */
-	void enterWhileStatementNonTerminal(MiniPascalGrammarParser.WhileStatementNonTerminalContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code WhileStatementNonTerminal}
-	 * labeled alternative in {@link MiniPascalGrammarParser#statement}.
-	 * @param ctx the parse tree
-	 */
-	void exitWhileStatementNonTerminal(MiniPascalGrammarParser.WhileStatementNonTerminalContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code ForStatementNonTerminal}
-	 * labeled alternative in {@link MiniPascalGrammarParser#statement}.
-	 * @param ctx the parse tree
-	 */
-	void enterForStatementNonTerminal(MiniPascalGrammarParser.ForStatementNonTerminalContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code ForStatementNonTerminal}
-	 * labeled alternative in {@link MiniPascalGrammarParser#statement}.
-	 * @param ctx the parse tree
-	 */
-	void exitForStatementNonTerminal(MiniPascalGrammarParser.ForStatementNonTerminalContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code RepeatStatementNonTerminal}
-	 * labeled alternative in {@link MiniPascalGrammarParser#statement}.
-	 * @param ctx the parse tree
-	 */
-	void enterRepeatStatementNonTerminal(MiniPascalGrammarParser.RepeatStatementNonTerminalContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code RepeatStatementNonTerminal}
-	 * labeled alternative in {@link MiniPascalGrammarParser#statement}.
-	 * @param ctx the parse tree
-	 */
-	void exitRepeatStatementNonTerminal(MiniPascalGrammarParser.RepeatStatementNonTerminalContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code WriteStatementNonTerminal}
-	 * labeled alternative in {@link MiniPascalGrammarParser#statement}.
-	 * @param ctx the parse tree
-	 */
-	void enterWriteStatementNonTerminal(MiniPascalGrammarParser.WriteStatementNonTerminalContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code WriteStatementNonTerminal}
-	 * labeled alternative in {@link MiniPascalGrammarParser#statement}.
-	 * @param ctx the parse tree
-	 */
-	void exitWriteStatementNonTerminal(MiniPascalGrammarParser.WriteStatementNonTerminalContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code ReadStatementNonTerminal}
-	 * labeled alternative in {@link MiniPascalGrammarParser#statement}.
-	 * @param ctx the parse tree
-	 */
-	void enterReadStatementNonTerminal(MiniPascalGrammarParser.ReadStatementNonTerminalContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code ReadStatementNonTerminal}
-	 * labeled alternative in {@link MiniPascalGrammarParser#statement}.
-	 * @param ctx the parse tree
-	 */
-	void exitReadStatementNonTerminal(MiniPascalGrammarParser.ReadStatementNonTerminalContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code FunctionStatementNonTerminal}
-	 * labeled alternative in {@link MiniPascalGrammarParser#statement}.
-	 * @param ctx the parse tree
-	 */
-	void enterFunctionStatementNonTerminal(MiniPascalGrammarParser.FunctionStatementNonTerminalContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code FunctionStatementNonTerminal}
-	 * labeled alternative in {@link MiniPascalGrammarParser#statement}.
-	 * @param ctx the parse tree
-	 */
-	void exitFunctionStatementNonTerminal(MiniPascalGrammarParser.FunctionStatementNonTerminalContext ctx);
+	void exitStatement(MiniPascalGrammarParser.StatementContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code AssignmentStatement}
 	 * labeled alternative in {@link MiniPascalGrammarParser#assignment_statement}.

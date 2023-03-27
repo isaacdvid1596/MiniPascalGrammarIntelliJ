@@ -3,10 +3,10 @@ package parser;
 public class FunctionDeclaration {
     private String identifier;
     private ParameterList parameterList;
-    private Types type;
-    private FunctionBlock functionBlock;
+    private Type type;
+    private Block functionBlock;
 
-    public FunctionDeclaration(String identifier, ParameterList parameterList, Types type, FunctionBlock functionBlock) {
+    public FunctionDeclaration(String identifier, ParameterList parameterList, Type type, Block functionBlock) {
         this.identifier = identifier;
         this.parameterList = parameterList;
         this.type = type;
