@@ -33,8 +33,8 @@ public class AntlrToFactor extends MiniPascalGrammarBaseVisitor<Factor> {
 
     @Override
     public Factor visitBetweenParentsExpression(MiniPascalGrammarParser.BetweenParentsExpressionContext ctx) {
-        Factor factor = visit(ctx.getChild(1));
-        return factor;
+        Expression expression = (Expression) ctx.getChild(1);
+        return new BetweenParenthesisExpression(expression);
     }
 
     @Override
