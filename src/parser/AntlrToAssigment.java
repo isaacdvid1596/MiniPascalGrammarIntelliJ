@@ -11,6 +11,10 @@ public class AntlrToAssigment extends MiniPascalGrammarBaseVisitor <AssignmentSt
         Expression expresion = (Expression) ctx.getChild(3);
         FunctionCall func = (FunctionCall) ctx.getChild(3);
         //Aun por resolver
-        return super.visitAssignmentStatement(ctx);
+        if(expresion.toString() == ""){
+            return new AssignmentStatement(id_name, func);
+        }else{
+            return new AssignmentStatement(id_name, expresion);
+        }
     }
 }
