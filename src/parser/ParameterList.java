@@ -8,4 +8,11 @@ public class ParameterList {
         this.firstParam = firstParam;
         this.optionalParam = optionalParam;
     }
+    public ParameterList() {
+
+    }
+    public ParameterList(ParameterDeclaration firstParam) {
+        this.firstParam = firstParam;
+
+    }
 }
